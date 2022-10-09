@@ -1,0 +1,172 @@
+<div class="wrapper">
+  <div class="body">
+    <img class="logo" src="../../../assets/img/login.png" alt="Login image" />
+    <h1>Registro de Sesión</h1>
+  </div>
+</div>
+
+<div class="contenedor-formulario">
+  <form
+    class="formulario"
+    #LoginForm="ngForm"
+    [formGroup]="registrarUsuario"
+  >
+    <div class="row g-2 mb-3">
+      <div class="col-md">
+        <div class="form-floating">
+          <input
+            type="text"
+            ngModel
+            name="nombre"
+            formControlName="userName"
+            class="form-control"
+            placeholder="Nombre"
+          />
+          <label>Nombre</label>
+          <span
+            *ngIf="
+              registrarUsuario.get('userName')?.hasError('required') &&
+              registrarUsuario.get('userName')?.touched
+            "
+            class="text-danger errorlabel"
+          >
+            Este <strong>campo</strong> es requerido
+          </span>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <input
+            type="text"
+            ngModel
+            name="apellido"
+            formControlName="lastName"
+            class="form-control"
+            placeholder="Apellido"
+          />
+          <label>Apellido</label>
+          <span
+            *ngIf="
+              registrarUsuario.get('lastName')?.hasError('required') &&
+              registrarUsuario.get('lastName')?.touched
+            "
+            class="text-danger errorlabel"
+          >
+            Este <strong>campo</strong> es requerido
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-2 mb-3">
+      <div class="col-md">
+        <div class="form-floating">
+          <input
+            type="email"
+            ngModel
+            name="email"
+            formControlName="email"
+            class="form-control"
+            placeholder="Correo Electronico"
+          />
+          <label>Correo Electronico</label>
+          <span
+            *ngIf="
+              registrarUsuario.get('email')?.hasError('required') &&
+              registrarUsuario.get('email')?.touched
+            "
+            class="text-danger errorlabel"
+          >
+            Este <strong>campo</strong> es requerido
+          </span>
+          <span
+            *ngIf="
+            registrarUsuario.get('email')?.errors?.['email']&&
+              registrarUsuario.get('email')?.touched
+            "
+            class="text-danger errorlabel"
+          >
+            Este <strong>campo no</strong> cumple con el formato requerido
+          </span>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <input
+            type="password"
+            ngModel
+            name="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Contraseña"
+          />
+          <label>Contraseña</label>
+          <span
+            *ngIf="
+              registrarUsuario.get('password')?.hasError('required') &&
+              registrarUsuario.get('password')?.touched
+            "
+            class="text-danger errorlabel"
+          >
+            Este <strong>campo</strong> es requerido
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-2 mb-3">
+      <div class="col-md">
+        <div class="form-floating">
+          <input
+            type="text"
+            ngModel
+            name="cedula"
+            formControlName="phone"
+            class="form-control"
+            placeholder="Numero de telefono"
+          />
+          <label>Numero de telefono</label>
+          <span
+            *ngIf="
+              registrarUsuario.get('phone')?.hasError('required') &&
+              registrarUsuario.get('phone')?.touched
+            "
+            class="text-danger errorlabel"
+          >
+            Este <strong>campo</strong> es requerido
+          </span>
+        </div>
+      </div>
+      <div class="col-md">
+
+      </div>
+    </div>
+
+    <div class="row g-2 mb-3">
+      <span
+      *ngIf="created"
+      class="text-danger errorlabel"
+      >
+       <strong>No se pudo crear el usuario </strong>
+     </span>
+    </div>
+
+    <div class="contenedor-button d-grid gap-2 mb-3 mt-4">
+      <button
+        class="btn btn-primary btn-lg"
+        [disabled]="registrarUsuario.invalid"
+        type="submit"
+        (click)="registerUser()"
+      >
+        Registrar
+      </button>
+    </div>
+    <div class="contenedor-button d-grid gap-2 mb-3">
+      <button routerLink="/login" class="btn btn-danger btn-lg" type="button">
+        Volver
+      </button>
+    </div>
+
+  </form>
+  <p>{{registrarUsuario.value | json}}</p>
+</div>

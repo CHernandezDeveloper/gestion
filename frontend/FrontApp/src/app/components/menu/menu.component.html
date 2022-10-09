@@ -1,0 +1,42 @@
+
+<div class="container">
+  <div class="container-start-audit">
+
+    <button (click)="activeHome()">Inicio</button>
+
+  </div>
+  <div class="container-start-audit">
+
+    <button (click)="activeStart()">Empezar Auditoria</button>
+
+  </div>
+
+  <div class="container-audits">
+    <button (click)="activeResults()">Resultados de las auditorias</button>
+  </div>
+
+  <div class="container-profile">
+    <button (click)="activeProfile()">Perfil</button>
+  </div>
+  <div class="container-logout">
+    <button (click)="logout()">Salir</button>
+  </div>
+</div>
+
+<div class="container-view">
+  <div *ngIf="activeRegisterInfoEm">
+    <app-reg-info-empresa></app-reg-info-empresa>
+  </div>
+
+  <div *ngIf="start">
+    <app-information></app-information>
+  </div>
+
+  <div *ngIf="results">
+    <h1>Aqui iran los resultados de las auditorias</h1>
+  </div>
+
+  <div *ngIf="profile">
+    <h1>Aqui estaran las configuraciones del perfil</h1>
+  </div>
+</div>
