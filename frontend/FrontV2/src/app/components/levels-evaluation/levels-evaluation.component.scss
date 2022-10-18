@@ -1,0 +1,25 @@
+table{
+  border-spacing:.5rem;
+}
+table tr :nth-child(2){
+  text-align: center;
+  // background-color: red;
+}
+table tr :nth-child(1){
+  background-color: rgb(72, 134, 206);
+}
+.firstRow > *{
+  background-color: rgb(72, 134, 206);
+
+}
+.container-title{
+  text-align: center;
+}
+.container-title h3{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.container-table{
+  margin-top: 2rem;
+}

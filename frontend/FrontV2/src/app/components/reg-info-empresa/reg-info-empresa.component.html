@@ -1,0 +1,87 @@
+<div class="wrapper">
+  <div class="body">
+    <div class="container-form">
+      <h3>Registrar informacion de la empresa</h3>
+      <form [formGroup]="formInfoEmpresa" class="formRegInfo">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input type="text" matInput formControlName="name"/>
+          <mat-error *ngIf="formInfoEmpresa.hasError('required') || formInfoEmpresa.get('name')?.touched">
+            El nombre es un campo <strong>obligatorio.</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>NIT</mat-label>
+          <input type="text" matInput formControlName="nit"/>
+          <mat-error *ngIf="formInfoEmpresa.get('nit')?.hasError('pattern')">
+            El NIT no cumple con el formato.
+          </mat-error>
+          <mat-error *ngIf="formInfoEmpresa.hasError('required') || formInfoEmpresa.get('nit')?.touched">
+            El NIT es un campo <strong>obligatorio.</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Tipo</mat-label>
+          <input type="text" matInput formControlName="type"/>
+          <mat-error *ngIf="formInfoEmpresa.get('type')?.hasError('required')">
+            Este campo es obligatorio
+          </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Mision</mat-label>
+          <input type="text" matInput formControlName="mision"/>
+          <mat-error *ngIf="formInfoEmpresa.get('mision')?.hasError('required') || formInfoEmpresa.get('mision')?.touched">
+            Este campo es obligatorio
+          </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Contacto</mat-label>
+          <input type="text" matInput formControlName="contact"/>
+          <mat-error *ngIf="formInfoEmpresa.get('contact')?.hasError('required') || formInfoEmpresa.get('contact')?.touched">
+            Este campo es obligatorio
+          </mat-error>
+          <mat-error *ngIf="formInfoEmpresa.get('contact')?.hasError('pattern')">
+            Por favor ingrese un contacto valido
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Correo</mat-label>
+          <input type="email" matInput formControlName="email"/>
+          <mat-error *ngIf="formInfoEmpresa.get('email')?.hasError('pattern')">
+            Por favor ingrese un email valido.
+          </mat-error>
+          <mat-error *ngIf="formInfoEmpresa.hasError('required') || formInfoEmpresa.get('email')?.touched">
+            El email es <strong>obligatorio.</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <div>
+          <span *ngIf="registered" class="text-danger errorlabel">
+            <strong>No se pudo registrar la empresa</strong>
+          </span>
+          <button mat-raised-button color="primary" [disabled]="formInfoEmpresa.invalid" (click)="registerCompany()">Registrar Empresa/Continuar</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<!-- <app-menu></app-menu> -->
+<div class="menu-audit">
+
+  <app-menu-audit></app-menu-audit>
+
+</div>
+
+
+
