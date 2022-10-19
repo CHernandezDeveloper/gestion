@@ -21,13 +21,17 @@ public class CompanyService {
 	public RegisterCompanyDTO registerCompany(Company company){
 		if(this.companyRepository.findByName(company.getName()) == null) {
 			this.companyRepository.save(company);
-			return new RegisterCompanyDTO(company.getName(),company.getEmail());
+			return new RegisterCompanyDTO(company.getName(),company.getEmailAuditor());
 		}
 		return null;
 	}
 	
-	public List<Company> getAllCompanies(String email){
+	public List<Company> getCompaniesEmail(String email){
 		
 		return this.companyRepository.findByEmail(email);
+	}
+	
+	public List<Company> getAll(){
+		return this.companyRepository.findAll();
 	}
 }

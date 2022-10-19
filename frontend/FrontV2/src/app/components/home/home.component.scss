@@ -1,0 +1,59 @@
+*{
+  font-size:1rem ;
+}
+.container-table{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem ;
+}
+table{
+  border-collapse:separate;
+  border-spacing:.5rem;
+  width: 50%;
+
+}
+table tr th{
+  background-color: rgb(72, 134, 206);
+}
+.container-level{
+  margin-top: 20px;
+}
+.none{
+  background-color: #fff;
+}
+.level1{
+  width: 10px;
+  height: 10px;
+  background-color: #4472C4;
+}
+.level2{
+  width: 10px;
+  height: 10px;
+  background-color: #0099CC;
+}
+.level3{
+  width: 10px;
+  height: 10px;
+  background-color: #70AD47;
+}
+.level4{
+  width: 10px;
+  height: 10px;
+  background-color: #ED7D31;
+}
+.level5{
+  width: 10px;
+  height: 10px;
+  background-color: #C00000;
+}
+
+.scale-evaluation{
+  width: 50%;
+  // border: 2px solid red;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 1.3rem;
+}

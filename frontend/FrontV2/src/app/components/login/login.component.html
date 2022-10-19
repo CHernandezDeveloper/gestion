@@ -1,0 +1,47 @@
+<div class="container-login">
+  <div class="body">
+    <div>
+
+    <div class="container-header">
+      <img class="logo" src="" alt="Login image">
+    <h1>Iniciar sesión en la aplicacion</h1>
+    </div>
+
+    <form [formGroup]="loginUsuario" class="formulario">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input type="email" matInput formControlName="email"/>
+        <mat-error *ngIf="loginUsuario.get('email')?.hasError('email')">
+          Por favor ingrese un email valido.
+        </mat-error>
+        <mat-error *ngIf="loginUsuario.hasError('required') || loginUsuario.get('email')?.touched">
+          El email es <strong>obligatorio.</strong>
+        </mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="password" />
+        <mat-error
+          *ngIf="loginUsuario.get('password')?.hasError('required')">
+          La contraseña es un campo <strong>obligatorio.</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <mat-error *ngIf="loginBand" class="text-danger errorlabel">No se ha podido iniciar sesion, <strong>usuario</strong> o <strong>contraseña</strong> incorrectos</mat-error>
+      </div>
+      <div class="d-grid gap-2 mb-3">
+        <button mat-raised-button color="primary" [disabled]="loginUsuario.invalid" (click)="loginUser()">Iniciar Sesión</button>
+      </div>
+
+      <p class="mb-3">¿No tienes cuenta?<button mat-button color="primary" routerLink="/registerUser">Registrarse</button></p>
+      <p class="mb-3"><button mat-button color="primary" routerLink="/passwordRecovery">Recuperar Contraseña</button></p>
+
+    </form>
+  </div>
+
+  </div>
+</div>

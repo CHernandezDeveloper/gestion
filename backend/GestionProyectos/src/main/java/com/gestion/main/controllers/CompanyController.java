@@ -34,8 +34,13 @@ public class CompanyController {
 	@GetMapping("/companies/{email}")
 	public List<Company> getAll(@PathVariable String email){
 		System.out.println("esta es la sonsollls "+email);
-		return this.companyService.getAllCompanies(email);
+		return this.companyService.getCompaniesEmail(email);
 	}
 	
+	@GetMapping("/companies")
+	public List<Company> getAll(){
+	
+		return this.companyService.getAll();
+	}
 	
 }

@@ -1,0 +1,41 @@
+<div class="container-up">
+  <div class="container-question">
+    <mat-form-field>
+      <mat-label>Preguntas levantamiento de informacion</mat-label>
+      <mat-select [(value)]="selected" (valueChange)="identificarId()">
+
+        <mat-option *ngFor="let pregunta of preguntas" [value]="pregunta.value" >
+          {{pregunta.viewValue}}
+
+        </mat-option>
+
+      </mat-select>
+
+    </mat-form-field>
+
+    <p>{{preguntas[in].viewValue}}</p>
+  </div>
+
+
+  <div class="container-form">
+    <form class="formulario" [formGroup]="formUpInfo">
+
+      <mat-form-field>
+        <mat-label>Nombre documento entregado</mat-label>
+        <input type="text" matInput formControlName="fileName"/>
+
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Observaciones</mat-label>
+        <input type="text" matInput formControlName="observations"/>
+
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" [disabled]="" (click)="enviarInfo()">Enviar</button>
+
+    </form>
+  </div>
+
+
+</div>

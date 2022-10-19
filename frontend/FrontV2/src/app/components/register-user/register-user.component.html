@@ -1,0 +1,114 @@
+<div class="container-main">
+
+  <div class="contenedor-formulario">
+    <div class="container-header">
+      <h1>Registrarse</h1>
+    </div>
+    <form class="formulario" #LoginForm="ngForm" [formGroup]="registrarUsuario">
+      <mat-form-field >
+        <mat-label>Nombre de usuario</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="userName"
+          placeholder="Carlos"
+        />
+        <mat-error
+          *ngIf="
+            registrarUsuario.get('userName')?.hasError('required') ||
+            registrarUsuario.get('userName')?.touched
+          "
+        >
+          El nombre de usuario es un campo <strong>obligatorio.</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Apellidos</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="lastName"
+          placeholder="Muñoz"
+        />
+        <mat-error
+          *ngIf="
+            registrarUsuario.get('lastName')?.hasError('required') ||
+            registrarUsuario.get('lastName')?.touched
+          "
+        >
+          El apellido es un campo <strong>obligatorio.</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="password"
+          placeholder="Muñoz"
+        />
+        <mat-error
+          *ngIf="registrarUsuario.get('password')?.hasError('required')"
+        >
+          La contraseña es un campo <strong>obligatorio.</strong>
+        </mat-error>
+        <mat-error
+          *ngIf="
+            registrarUsuario.get('password')?.hasError('minlength') &&
+            registrarUsuario.get('password')?.touched
+          "
+        >
+          La contraseña debe tener al menos 6 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="Ej. carlosAndres@auditor.com"
+        />
+        <mat-error *ngIf="registrarUsuario.get('email')?.hasError('email')">
+          Por favor ingrese un email valido.
+        </mat-error>
+        <mat-error
+          *ngIf="
+            registrarUsuario.hasError('required') ||
+            registrarUsuario.get('email')?.touched
+          "
+        >
+          El email es <strong>obligatorio.</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Telefono</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="phone"
+          placeholder="3125674565"
+        />
+      </mat-form-field>
+
+      <div class="contenedor-button d-grid gap-2 mb-3 mt-4">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="registerUser()"
+          [disabled]="!registrarUsuario.valid"
+        >
+          Registrase
+        </button>
+      </div>
+      <div class="contenedor-button d-grid gap-2 mb-3">
+        <button mat-button color="primary" routerLink="/login">Volver</button>
+      </div>
+    </form>
+    <!-- <p>{{ registrarUsuario.value | json }}</p> -->
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<!-- <div class="container">
+  <p-tabView class="tab-view">
+    <p-tabPanel styleClass="dark-panel"leftIcon="pi pi-home" header="Inicio">
+
+       Content 1
+    </p-tabPanel>
+    <p-tabPanel leftIcon="pi pi-chart-line" header="Empezar Auditoria">
+
+        <app-reg-info-empresa></app-reg-info-empresa>
+
+    </p-tabPanel>
+    <p-tabPanel leftIcon="pi pi-folder" header="Resultados Auditorias">
+        Content 3
+    </p-tabPanel>
+    <p-tabPanel leftIcon="pi pi-user-edit" header="perfil">
+      Content 3
+    </p-tabPanel>
+  </p-tabView>
+ </div> -->
+<div class="containerMenu">
+  <mat-tab-group mat-align-tabs="center" dynamicHeight>
+
+    <mat-tab label="Inicio">
+      <app-home></app-home>
+    </mat-tab>
+
+    <mat-tab label="Empezar Auditoria">
+
+      <ng-container class="container-reg">
+        <app-reg-info-empresa></app-reg-info-empresa>
+      </ng-container>
+
+    </mat-tab>
+    <mat-tab label="Resultados Auditorias"> Content 3 </mat-tab>
+    <mat-tab label="Perfil"> Content 3 </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <fa-icon [icon]="faPower" size="2x" [styles]="{'stroke': 'red', 'color': 'red'}" (click)="logout()"></fa-icon>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+
