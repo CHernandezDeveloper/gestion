@@ -24,7 +24,8 @@ export class RegInfoEmpresaComponent implements OnInit {
         type: new FormControl("",[Validators.required]),
         mision : new FormControl("",[Validators.required]),
         contact : new FormControl("",[Validators.required,Validators.pattern("^([0-9]{10})?$")]),
-        email: sessionStorage.getItem("auditor")
+        email: new FormControl(""),
+        emailAuditor : sessionStorage.getItem("auditor"),
       }
     )
   }
@@ -32,14 +33,19 @@ export class RegInfoEmpresaComponent implements OnInit {
 
   registerCompany(){
 
+    this.registered = false;
+
     this.companyService.registerCompany(this.formInfoEmpresa.value).subscribe(
       {
         next:(response)=>{
 
           if(response == null){
             this.registered = false;
+            alert('Error al  Registrar la Empresa')
           }else{
             this.registered = true;
+            alert('Empresa Registrada')
+
           }
         },
         error:(error) => console.log(error)

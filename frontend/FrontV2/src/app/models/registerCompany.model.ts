@@ -6,4 +6,5 @@ export interface IRCompany{
   mision:string,
 	contact : number;
 	email : string;
+  emailAuditor : string;
 }

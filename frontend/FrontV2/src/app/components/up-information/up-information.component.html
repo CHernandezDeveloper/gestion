@@ -22,17 +22,17 @@
 
       <mat-form-field>
         <mat-label>Nombre documento entregado</mat-label>
-        <input type="text" matInput formControlName="nombreArchivo"/>
+        <input type="text" matInput formControlName="fileName"/>
 
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Observaciones</mat-label>
-        <input type="text" matInput formControlName="observaciones"/>
+        <input type="text" matInput formControlName="observations"/>
 
       </mat-form-field>
 
-      <button mat-raised-button color="primary" [disabled]="" (click)="identificarId()">Enviar</button>
+      <button mat-raised-button color="primary" [disabled]="" (click)="enviarInfo()">Enviar</button>
 
     </form>
   </div>

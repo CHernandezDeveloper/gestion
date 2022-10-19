@@ -1,7 +1,8 @@
 export interface IInformation{
 
-  pregunta:number,
-  nombreArchivo:string,
-  descripcion:string
+  p: number,
+  fileName: string,
+  observations: string,
+  emailAuditor: string | null
 
 }

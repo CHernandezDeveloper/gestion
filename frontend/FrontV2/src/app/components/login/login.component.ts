@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         next:(response) => {
           console.log(response)
           if(response != null){
-            this.router.navigateByUrl("home")
+            this.router.navigateByUrl("dashboard")
             sessionStorage.setItem("login","access")
             sessionStorage.setItem("auditor",response.email)
             this.loginBand = false;

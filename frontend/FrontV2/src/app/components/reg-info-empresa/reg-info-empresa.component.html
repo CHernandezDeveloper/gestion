@@ -64,9 +64,6 @@
         </mat-form-field>
 
         <div>
-          <span *ngIf="registered" class="text-danger errorlabel">
-            <strong>No se pudo registrar la empresa</strong>
-          </span>
           <button mat-raised-button color="primary" [disabled]="formInfoEmpresa.invalid" (click)="registerCompany()">Registrar Empresa/Continuar</button>
 
         </div>
@@ -77,7 +74,7 @@
 </div>
 
 <!-- <app-menu></app-menu> -->
-<div class="menu-audit">
+<div class="menu-audit" *ngIf="registered">
 
   <app-menu-audit></app-menu-audit>
 
