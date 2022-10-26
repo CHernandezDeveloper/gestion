@@ -35,6 +35,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LevelsEvaluationComponent } from './components/levels-evaluation/levels-evaluation.component';
 import { UpInformationComponent } from './components/up-information/up-information.component';
 import { MenuAuditComponent } from './components/menu-audit/menu-audit.component';
+import { AreasComponent } from './components/areas/areas.component';
+import { AdministrativasComponent } from './components/administrativas/administrativas.component';
 
 
 
@@ -54,6 +56,8 @@ import { MenuAuditComponent } from './components/menu-audit/menu-audit.component
     LevelsEvaluationComponent,
     UpInformationComponent,
     MenuAuditComponent,
+    AreasComponent,
+    AdministrativasComponent,
   ],
   imports: [
     BrowserModule,

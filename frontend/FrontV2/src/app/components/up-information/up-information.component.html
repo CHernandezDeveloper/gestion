@@ -1,8 +1,8 @@
 <div class="container-up">
   <div class="container-question">
-    <mat-form-field>
+    <mat-form-field class="test-class">
       <mat-label>Preguntas levantamiento de informacion</mat-label>
-      <mat-select [(value)]="selected" (valueChange)="identificarId()">
+      <mat-select  [(value)]="selected" (valueChange)="identificarId()">
 
         <mat-option *ngFor="let pregunta of preguntas" [value]="pregunta.value" >
           {{pregunta.viewValue}}

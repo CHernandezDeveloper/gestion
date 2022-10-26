@@ -11,14 +11,10 @@ export class UpInformationComponent implements OnInit {
 
   selected = "";
   in = 0;
-  preguntas = [
-    {},
-    { value: 'p1', viewValue: 'Tipo de entidad (Nacional, Territorial A, Territorial B o C)' },
-    { value: 'p2', viewValue: 'Misión' },
-    { value: 'p3', viewValue: 'Análisis de contexto: La entidad debe determinar los aspectos externos e internos que son necesarios para cumplir su propósito y que afectan su capacidad para lograr los resultados previstos en el MSPI' },
-    { value: 'p31', viewValue: 'Análisis de contexto: La entidad debe determinar los aspectos externos e internos que son necesarios para cumplir su propósito y que afectan su capacidad para lograr los resultados previstos en el MSPI' },
+  preguntas = [{
+    value:"", viewValue:""
+  }];
 
-  ]
   formUpInfo : FormGroup;
 
   constructor(private formBuilder : FormBuilder, private upInformation : UpInformationService) {
@@ -28,6 +24,7 @@ export class UpInformationComponent implements OnInit {
       observations : new FormControl(""),
 
     })
+    this.preguntas = this.upInformation.questions;
   }
 
 
@@ -48,6 +45,7 @@ export class UpInformationComponent implements OnInit {
       p: this.in,
       fileName : this.formUpInfo.value.fileName,
       observations : this.formUpInfo.value.observations,
+      companyName : sessionStorage.getItem("company"),
       emailAuditor: sessionStorage.getItem("auditor")
     }
     console.log(temp);
