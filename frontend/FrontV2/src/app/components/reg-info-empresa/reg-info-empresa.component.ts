@@ -44,6 +44,12 @@ export class RegInfoEmpresaComponent implements OnInit {
             alert('Error al  Registrar la Empresa')
           }else{
             this.registered = true;
+
+            if(sessionStorage.getItem('company')){
+              sessionStorage.removeItem('companuy');
+            }
+            sessionStorage.setItem('company',this.formInfoEmpresa.value.name);
+
             alert('Empresa Registrada')
 
           }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuAuditComponent implements OnInit {
 
-  fases = ['Levantamiento Info','Areas Involucradas','Administrativas','Tecnicas','PHVA','Madurez']
+  fases = ['Levantamiento Info','Areas Involucradas','Administrativas','Tecnicas','PHVA']
   option : string = "";
 
   constructor() { }

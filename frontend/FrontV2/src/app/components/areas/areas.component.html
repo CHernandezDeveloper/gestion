@@ -1,0 +1,49 @@
+<div class="container-areas">
+
+  <form  [formGroup]="formAreas" class="formRegInfo">
+    <p><strong>Indique en cada campo el nombre del funcionario</strong></p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Control Interno</mat-label>
+      <input type="text" matInput formControlName="p1"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Gestion Humana</mat-label>
+      <input type="text" matInput formControlName="p2"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Responsable de compras y adquisiciones</mat-label>
+      <input type="text" matInput formControlName="p3"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Responsable de la continuidad</mat-label>
+      <input type="text" matInput formControlName="p4"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Responsable de la seguridad fisica</mat-label>
+      <input type="text" matInput formControlName="p5"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Responsable del SI</mat-label>
+      <input type="text" matInput formControlName="p6"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Responsable de TICs</mat-label>
+      <input type="text" matInput formControlName="p7"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Calidad</mat-label>
+      <input type="text" matInput formControlName="p8"/>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="formAreas.invalid" (click)="agregarArea()">Aceptar </button>
+
+  </form>
+
+</div>

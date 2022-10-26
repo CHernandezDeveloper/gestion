@@ -17,10 +17,10 @@ public class UpInformationService {
 	public String save(UpInformation information) {
 		UpInformation temp = this.informationRepository.findByP(information.getP());
 
-		if (temp == null) {
+		if (temp == null || !temp.getCompanyName().equalsIgnoreCase( information.getCompanyName())) {
 			this.informationRepository.save(information);
 		} else {
-			
+		
 			this.informationRepository.deleteById(temp.getId());
 			this.informationRepository.save(information);
 			return "ok";
@@ -30,7 +30,7 @@ public class UpInformationService {
 	}
 	
 	public List<UpInformation> getAll(){
-		System.out.println("casa");
+		//System.out.println("casa");
 		return this.informationRepository.findAll();
 	}
 }

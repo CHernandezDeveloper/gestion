@@ -15,6 +15,7 @@ public class UpInformation {
 	private Long p;
 	private String fileName;
 	private String observations;
+	private String companyName;
 	private String emailAuditor;
 
 	public Long getId() {
@@ -55,6 +56,14 @@ public class UpInformation {
 
 	public void setObservations(String observations) {
 		this.observations = observations;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompany(String company) {
+		this.companyName = company;
 	}
 
 }
