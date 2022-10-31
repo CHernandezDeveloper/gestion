@@ -1,8 +1,8 @@
 <div class="container-form">
-  <form [formGroup]="formAdministrativas">
+  <form [formGroup]="formA">
 
     <div class="container-general">
-      <h3><strong>ID Item:</strong> AD.1 <strong>Calificacion:</strong> {{ad1}}</h3>
+      <h3><strong>ID Item:</strong> AD.1 <strong>Calificacion:</strong> {{ad1 | number:'2.1-2'}}</h3>
       <p (click)="controlAD1=!controlAD1" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlAD1 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD1">
         <h3><strong>Apartado:</strong> Politica de seguridad de la informacion</h3>
@@ -86,7 +86,7 @@
 
     <div class="container-general">
 
-      <h3><strong>ID Item:</strong> AD.2 <strong>Calificacion:</strong> {{ad2}}</h3>
+      <h3><strong>ID Item:</strong> AD.2 <strong>Calificacion:</strong> {{ad2 | number:'2.1-2'}}</h3>
       <p (click)="controlAD2=!controlAD2" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlAD2 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD2">
         <h3><strong>Apartado:</strong> Responsabilidades y organizacion seguridad información</h3>
@@ -229,7 +229,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p3">
+            <mat-select formControlName="p3" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -251,7 +251,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p4">
+            <mat-select formControlName="p4" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -273,7 +273,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p5">
+            <mat-select formControlName="p5" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -295,7 +295,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p6">
+            <mat-select formControlName="p6" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -317,7 +317,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p7">
+            <mat-select formControlName="p7" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -339,7 +339,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p8">
+            <mat-select formControlName="p8" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -361,7 +361,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p9">
+            <mat-select formControlName="p9" (ngModelChange)="calculoAD2()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -383,7 +383,7 @@
 
     <div class="container-general">
 
-      <h3><strong>ID Item:</strong> AD.3 <strong>Calificacion:</strong> {{ad3}}</h3>
+      <h3><strong>ID Item:</strong> AD.3 <strong>Calificacion:</strong> {{ad3 | number:'2.1-2'}}</h3>
       <p (click)="controlAD3=!controlAD3" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlAD3 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD3">
         <h3><strong>Apartado:</strong> Seguridad de los recursos humanos</h3>
@@ -474,7 +474,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p10">
+            <mat-select formControlName="p10" (ngModelChange)="calculoAD3()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -496,7 +496,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p11">
+            <mat-select formControlName="p11" (ngModelChange)="calculoAD3()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -518,7 +518,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p12">
+            <mat-select formControlName="p12" (ngModelChange)="calculoAD3()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -541,7 +541,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p13">
+            <mat-select formControlName="p13" (ngModelChange)="calculoAD3()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -563,7 +563,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p14">
+            <mat-select formControlName="p14" (ngModelChange)="calculoAD3()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -585,7 +585,7 @@
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p15">
+            <mat-select formControlName="p15" (ngModelChange)="calculoAD3()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -605,7 +605,7 @@
 
     <div class="container-general">
 
-      <h3><strong>ID Item:</strong> AD.4 <strong>Calificacion:</strong> {{ad4}}</h3>
+      <h3><strong>ID Item:</strong> AD.4 <strong>Calificacion:</strong> {{ad4 | number:'2.1-2'}}</h3>
       <p (click)="controlAD4=!controlAD4" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlAD4 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD4">
         <h3><strong>Apartado:</strong> Gestion de activos</h3>
@@ -750,7 +750,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p16">
+            <mat-select formControlName="p16" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -773,7 +773,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p17">
+            <mat-select formControlName="p17" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -795,7 +795,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p18">
+            <mat-select formControlName="p18" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -817,7 +817,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p19">
+            <mat-select formControlName="p19" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -839,7 +839,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p20">
+            <mat-select formControlName="p20" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -861,7 +861,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p21">
+            <mat-select formControlName="p21" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -883,7 +883,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p22">
+            <mat-select formControlName="p22" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -905,7 +905,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p23">
+            <mat-select formControlName="p23" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -927,7 +927,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p24">
+            <mat-select formControlName="p24" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -949,7 +949,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
           <mat-form-field>
             <mat-label>Calificación</mat-label>
-            <mat-select formControlName="p25">
+            <mat-select formControlName="p25" (ngModelChange)="calculoAD4()">
               <mat-option value="n/a">n/a</mat-option>
               <mat-option value="0">0</mat-option>
               <mat-option value="20">20</mat-option>
@@ -970,7 +970,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
     </div>
 
     <div class="container-general">
-      <h3><strong>ID Item:</strong> AD.5 <strong>Calificacion:</strong> {{ad5}}</h3>
+      <h3><strong>ID Item:</strong> AD.5 <strong>Calificacion:</strong> {{ad5 | number:'2.1-2'}}</h3>
       <p (click)="controlAD5=!controlAD5" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlAD5 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD5">
 
@@ -1046,7 +1046,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
               <mat-form-field>
                 <mat-label>Calificación</mat-label>
-                <mat-select formControlName="p26">
+                <mat-select formControlName="p26" (ngModelChange)="calculoAD5()">
                   <mat-option value="n/a">n/a</mat-option>
                   <mat-option value="0">0</mat-option>
                   <mat-option value="20">20</mat-option>
@@ -1071,7 +1071,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p27">
+              <mat-select formControlName="p27" (ngModelChange)="calculoAD5()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1096,7 +1096,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p28">
+              <mat-select formControlName="p28" (ngModelChange)="calculoAD5()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1121,7 +1121,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p29">
+              <mat-select formControlName="p29" (ngModelChange)="calculoAD5()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1144,7 +1144,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
     </div>
 
     <div class="container-general">
-      <h3><strong>ID Item:</strong> AD.6 <strong>Calificacion:</strong> {{ad6}}</h3>
+      <h3><strong>ID Item:</strong> AD.6 <strong>Calificacion:</strong> {{ad6 | number:'2.1-2'}}</h3>
       <p (click)="controlAD6=!controlAD6" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlAD6 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD6">
 
@@ -1252,7 +1252,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
               <mat-form-field>
                 <mat-label>Calificación</mat-label>
-                <mat-select formControlName="p30">
+                <mat-select formControlName="p30" (ngModelChange)="calculoAD6()">
                   <mat-option value="n/a">n/a</mat-option>
                   <mat-option value="0">0</mat-option>
                   <mat-option value="20">20</mat-option>
@@ -1277,7 +1277,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p31">
+              <mat-select formControlName="p31" (ngModelChange)="calculoAD6()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1302,7 +1302,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p32">
+              <mat-select formControlName="p32" (ngModelChange)="calculoAD6()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1327,7 +1327,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p33">
+              <mat-select formControlName="p33" (ngModelChange)="calculoAD6()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1352,7 +1352,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p34">
+              <mat-select formControlName="p34" (ngModelChange)="calculoAD6()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1377,7 +1377,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p35">
+              <mat-select formControlName="p35" (ngModelChange)="calculoAD6()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1403,7 +1403,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p36">
+              <mat-select formControlName="p36" (ngModelChange)="calculoAD6()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1425,7 +1425,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
     </div>
 
     <div class="container-general">
-      <h3><strong>ID Item:</strong> AD.7 <strong>Calificacion:</strong> {{ad7}}</h3>
+      <h3><strong>ID Item:</strong> AD.7 <strong>Calificacion:</strong> {{ad7 | number:'2.1-2'}}</h3>
       <p (click)="controlAD7=!controlAD7" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlAD7 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlAD7">
 
@@ -1473,7 +1473,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
               <mat-form-field>
                 <mat-label>Calificación</mat-label>
-                <mat-select formControlName="p37">
+                <mat-select formControlName="p37" (ngModelChange)="calculoAD7()">
                   <mat-option value="n/a">n/a</mat-option>
                   <mat-option value="0">0</mat-option>
                   <mat-option value="20">20</mat-option>
@@ -1498,7 +1498,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
 
             <mat-form-field>
               <mat-label>Calificación</mat-label>
-              <mat-select formControlName="p38">
+              <mat-select formControlName="p38" (ngModelChange)="calculoAD7()">
                 <mat-option value="n/a">n/a</mat-option>
                 <mat-option value="0">0</mat-option>
                 <mat-option value="20">20</mat-option>
@@ -1520,7 +1520,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
     </div>
 
     <div class="container-button">
-      <button mat-raised-button color="primary" [disabled]="formAdministrativas.invalid">Enviar Información</button>
+      <button mat-raised-button color="primary" (click)="regResult()" [disabled]="formA.invalid">Enviar Información</button>
     </div>
 
 
