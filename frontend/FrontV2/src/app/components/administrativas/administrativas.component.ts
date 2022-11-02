@@ -1,37 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { IAdministrativas } from 'src/app/models/administrativas.model';
+import { AdministrativasService } from 'src/app/services/administrativas.service';
 
 @Component({
   selector: 'app-administrativas',
   templateUrl: './administrativas.component.html',
   styleUrls: ['./administrativas.component.scss']
 })
-export class AdministrativasComponent implements OnInit{
+export class AdministrativasComponent implements OnInit {
 
-  verPrueba : boolean = false;
-  formAdministrativas : FormGroup;
+  verPrueba: boolean = false;
+  formA: FormGroup;
 
-  controlAD1 : boolean = false;
-  controlAD2 : boolean = false;
-  controlAD3 : boolean = false;
-  controlAD4 : boolean = false;
-  controlAD5 : boolean = false;
-  controlAD6 : boolean = false;
-  controlAD7 : boolean = false;
-
-
-  //Variables a enviar al formulario
-  ad1: number =  0 ;
-  ad2 : number = 0;
-  ad3 : number = 0;
-  ad4 : number = 0;
-  ad5 : number = 0;
-  ad6 : number = 0;
-  ad7 : number = 0;
+  controlAD1: boolean = false;
+  controlAD2: boolean = false;
+  controlAD3: boolean = false;
+  controlAD4: boolean = false;
+  controlAD5: boolean = false;
+  controlAD6: boolean = false;
+  controlAD7: boolean = false;
 
 
-  constructor(private formBuilder: FormBuilder) {
-    this.formAdministrativas = this.formBuilder.group(
+  //Variables a enviar a la bd
+  ad1: number = 0;
+  ad2: number = 0;
+  ad3: number = 0;
+  ad4: number = 0;
+  ad5: number = 0;
+  ad6: number = 0;
+  ad7: number = 0;
+
+
+  constructor(private formBuilder: FormBuilder, private administrativasService: AdministrativasService ) {
+    this.formA = this.formBuilder.group(
       {
         p1: new FormControl("", Validators.required),
         p2: new FormControl("", Validators.required),
@@ -87,32 +89,56 @@ export class AdministrativasComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  calculoAD1(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD1() {
+    this.ad1 = (Number(this.formA.value.p1) + Number(this.formA.value.p2)) / 2;
   }
 
-  calculoAD2(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD2() {
+    this.ad2 = (Number(this.formA.value.p3) + Number(this.formA.value.p4) + Number(this.formA.value.p5) +
+                Number(this.formA.value.p6) + Number(this.formA.value.p7) + Number(this.formA.value.p8) + Number(this.formA.value.p9)) / 7;
   }
 
-  calculoAD3(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD3() {
+    this.ad3 = (Number(this.formA.value.p10) + Number(this.formA.value.p11)+ Number(this.formA.value.p12)+ Number(this.formA.value.p13)
+              + Number(this.formA.value.p14)
+              + Number(this.formA.value.p15)) / 6;
   }
 
-  calculoAD4(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD4() {
+    this.ad4 = (Number(this.formA.value.p16) + Number(this.formA.value.p17)+ Number(this.formA.value.p18)+ Number(this.formA.value.p19)
+            + Number(this.formA.value.p20)+ Number(this.formA.value.p21)+ Number(this.formA.value.p22)+ Number(this.formA.value.p23)+
+            Number(this.formA.value.p24)+ Number(this.formA.value.p25)) / 10;
   }
 
-  calculoAD5(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD5() {
+    this.ad5 = (Number(this.formA.value.p26) + Number(this.formA.value.p27)+ Number(this.formA.value.p28)+ Number(this.formA.value.p29)) / 4;
   }
 
-  calculoAD6(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD6() {
+    this.ad6 = (Number(this.formA.value.p30) + Number(this.formA.value.p31)+ Number(this.formA.value.p32)+ Number(this.formA.value.p33)
+    + Number(this.formA.value.p34)+ Number(this.formA.value.p35)+ Number(this.formA.value.p36)) / 7;
   }
 
-  calculoAD7(){
-    this.ad1 = (Number(this.formAdministrativas.value.p1) + Number(this.formAdministrativas.value.p2)) / 2 ;
+  calculoAD7() {
+    this.ad7 = (Number(this.formA.value.p37) + Number(this.formA.value.p38)) / 2;
   }
 
+  regResult(){
+    let temp = {ad1:this.ad1,ad2:this.ad2,ad3:this.ad3,ad4:this.ad4,
+      ad5:this.ad5,
+      ad6:this.ad6,
+      ad7:this.ad7,
+      companyName: sessionStorage.getItem('company'),
+      emailAuditor:sessionStorage.getItem('auditor')}
+
+    this.administrativasService.regResultAdmin(temp as IAdministrativas).subscribe(
+      {
+        next: reponse => reponse == 'ok' ? alert('info registrada con exito'): alert('error al enviar datos'),
+        error: error => console.log(error),
+        complete:() => alert('info registrada con exito')
+
+      }
+    )
+
+  }
 }
