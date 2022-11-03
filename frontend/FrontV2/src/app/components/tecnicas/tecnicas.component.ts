@@ -75,14 +75,58 @@ export class TecnicasComponent implements OnInit {
       p31: new FormControl("", Validators.required),
       //T3
 
+      //T4
       p32: new FormControl("", Validators.required),
       p33: new FormControl("", Validators.required),
       p34: new FormControl("", Validators.required),
       p35: new FormControl("", Validators.required),
       p36: new FormControl("", Validators.required),
-
       p37: new FormControl("", Validators.required),
       p38: new FormControl("", Validators.required),
+      p39: new FormControl("", Validators.required),
+      p40: new FormControl("", Validators.required),
+      p41: new FormControl("", Validators.required),
+      p42: new FormControl("", Validators.required),
+      p43: new FormControl("", Validators.required),
+      p44: new FormControl("", Validators.required),
+      p45: new FormControl("", Validators.required),
+      //T4
+
+      //T5
+      p46: new FormControl("", Validators.required),
+      p47: new FormControl("", Validators.required),
+      p48: new FormControl("", Validators.required),
+      p49: new FormControl("", Validators.required),
+      p50: new FormControl("", Validators.required),
+      p51: new FormControl("", Validators.required),
+      p52: new FormControl("", Validators.required),
+      //T5
+
+      //T6
+      p53: new FormControl("", Validators.required),
+      p54: new FormControl("", Validators.required),
+      p55: new FormControl("", Validators.required),
+      p56: new FormControl("", Validators.required),
+      p57: new FormControl("", Validators.required),
+      p58: new FormControl("", Validators.required),
+      p59: new FormControl("", Validators.required),
+      p60: new FormControl("", Validators.required),
+      p61: new FormControl("", Validators.required),
+      p62: new FormControl("", Validators.required),
+      p63: new FormControl("", Validators.required),
+      p64: new FormControl("", Validators.required),
+      p65: new FormControl("", Validators.required),
+      //T6
+
+      //T7
+      p66: new FormControl("", Validators.required),
+      p67: new FormControl("", Validators.required),
+      p68: new FormControl("", Validators.required),
+      p69: new FormControl("", Validators.required),
+      p70: new FormControl("", Validators.required),
+      p71: new FormControl("", Validators.required),
+      p72: new FormControl("", Validators.required),
+      //T7
     })
   }
 
@@ -107,6 +151,34 @@ export class TecnicasComponent implements OnInit {
                 Number(this.formT.value.p23) + Number(this.formT.value.p24)+ Number(this.formT.value.p25) +
                 Number(this.formT.value.p26) + Number(this.formT.value.p27)+ Number(this.formT.value.p28) +
                 Number(this.formT.value.p29) + Number(this.formT.value.p30)+ Number(this.formT.value.p31)) / 15;
+  }
+
+  calculoT4() {
+    this.t1 = (Number(this.formT.value.p32) + Number(this.formT.value.p33)+ Number(this.formT.value.p34) +
+                Number(this.formT.value.p35) + Number(this.formT.value.p36)+ Number(this.formT.value.p37) +
+                Number(this.formT.value.p38) + Number(this.formT.value.p39)+ Number(this.formT.value.p40) +
+                Number(this.formT.value.p41) + Number(this.formT.value.p42)+ Number(this.formT.value.p43) +
+                Number(this.formT.value.p44) + Number(this.formT.value.p45)) / 14;
+  }
+
+  calculoT5() {
+    this.t1 = (Number(this.formT.value.p46) + Number(this.formT.value.p47)+ Number(this.formT.value.p48) +
+                Number(this.formT.value.p49) + Number(this.formT.value.p50)+ Number(this.formT.value.p51) +
+                Number(this.formT.value.p52)) / 5;
+  }
+
+  calculoT6() {
+    this.t1 = (Number(this.formT.value.p53) + Number(this.formT.value.p54)+ Number(this.formT.value.p55) +
+                Number(this.formT.value.p56) + Number(this.formT.value.p57)+ Number(this.formT.value.p58) +
+                Number(this.formT.value.p59) + Number(this.formT.value.p60)+ Number(this.formT.value.p61) +
+                Number(this.formT.value.p62) + Number(this.formT.value.p63)+ Number(this.formT.value.p64) +
+                Number(this.formT.value.p65)) / 13;
+  }
+
+  calculoT7() {
+    this.t1 = (Number(this.formT.value.p66) + Number(this.formT.value.p67)+ Number(this.formT.value.p68) +
+                Number(this.formT.value.p69) + Number(this.formT.value.p70)+ Number(this.formT.value.p71) +
+                Number(this.formT.value.p72)) / 7;
   }
 
   regResult(){
