@@ -37,6 +37,7 @@ import { UpInformationComponent } from './components/up-information/up-informati
 import { MenuAuditComponent } from './components/menu-audit/menu-audit.component';
 import { AreasComponent } from './components/areas/areas.component';
 import { AdministrativasComponent } from './components/administrativas/administrativas.component';
+import { TecnicasComponent } from './components/tecnicas/tecnicas.component';
 
 
 
@@ -58,6 +59,7 @@ import { AdministrativasComponent } from './components/administrativas/administr
     MenuAuditComponent,
     AreasComponent,
     AdministrativasComponent,
+    TecnicasComponent,
   ],
   imports: [
     BrowserModule,

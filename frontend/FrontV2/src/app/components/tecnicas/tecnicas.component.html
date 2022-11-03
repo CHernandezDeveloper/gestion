@@ -1,0 +1,2147 @@
+<div class="container-form">
+    <form [formGroup]="formT">
+  
+      <div class="container-general">
+        <h3><strong>ID Item:</strong> T.1 <strong>Calificacion:</strong> {{t1 | number:'2.1-2'}}</h3>
+        <p (click)="controlT1=!controlT1" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlT1 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT1">
+          <h3><strong>Apartado:</strong> Control de acceso</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de SI/ Responsable de TICs </h3>
+          <h3><strong>ITEM:</strong> Control de acceso </h3>
+  
+          <h3><strong>Descripción:</strong> Se debe limitar el acceso a información y a instalaciones de procesamiento de información.</h3>
+          <h3><strong>MSPI:</strong> Componente planificación y modelo de madurez nivel gestionado</h3>
+          <h3><strong>ISO:</strong> A.9</h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Prueba:</strong> <p [style]="{'color': 'blue','cursor':'pointer'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>T 1.1.1</strong></h3>
+              <p>Revisar que la política contenga lo siguiente:<br>
+                  a) Los requisitos de seguridad para las aplicaciones del negocio; <br>
+                  b) Las políticas para la divulgación y autorización de la información, y los niveles de seguridad de la información y de clasificación de la información;<br>
+                  c) La coherencia entre los derechos de acceso y las políticas de clasificación de información de los sistemas y redes;<br>
+                  d) La legislación pertinente y cualquier obligación contractual concerniente a la limitación del acceso a datos o servicios;<br>
+                  e) La gestión de los derechos de acceso en un entorno distribuido y en red, que reconoce todos los tipos de conexiones disponibles;<br>
+                  f) La separación de los roles de control de acceso, (solicitud de acceso, autorización de acceso, administración del acceso);<br>
+                  g) Los requisitos para la autorización formal de las solicitudes de acceso;<br>
+                  h) Los requisitos para la revisión periódica de los derechos de acceso;<br>
+                  i) El retiro de los derechos de acceso;<br>
+                  j) El ingreso de los registros de todos los eventos significativos concernientes al uso y gestión de identificación de los usuarios,<br> 
+                     e información de autenticación secreta, en el archivo permanente;<br>
+                  k) Los roles de acceso privilegiado;<br>
+      
+              </p>
+            </div> 
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.1.2</strong></h3>
+              <p>Revisar la política relacionada con el uso de redes y de servicios de red y verificar que incluya:<br>
+                  a) Las redes y servicios de red a los que se permite el acceso;<br>
+                  b) Los procedimientos de autorización para determinar a quién se permite el acceso a qué redes y servicios de red;<br>
+                  c) Los controles y procedimientos de gestión para proteger el acceso a las conexiones de red y a los servicios de red;<br>
+                  d) Los medios usados para acceder a las redes y servicios de red ( uso de VPN o redes inalámbricas);<br>
+                  e) Los requisitos de autenticación de usuarios para acceder a diversos servicios de red;<br>
+                  f) El seguimiento del uso de servicios de red.<br>
+  
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.2.1</strong></h3>
+              <p>Revisar el proceso para la gestión y la identificación de los usuarios que incluya:<br>
+                  a) Identificaciones únicas para los usuarios, que les permita estar vinculados a sus acciones y
+                     mantener la responsabilidad por ellas; el uso de identificaciones compartidas solo se debe permitir
+                     cuando sea necesario por razones operativas o del negocio, y se  aprueban y documentan;<br>
+                  b) Deshabilitar o retirar inmediatamente las identificaciones de los usuarios que han dejado la organización;<br>
+                  c) Identificar y eliminar o deshabilitar periódicamente las identificaciones de usuario redundantes;<br>
+                  d) Asegurar que las identificaciones de usuario redundantes no se asignen a otros usuarios.<br>
+  
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.2.2</strong></h3>
+              <p>Revisar el proceso para asignar o revocar los derechos de acceso otorgados a las identificaciones 
+                 de usuario que incluya:<br>
+                    a) Obtener la autorización del propietario del sistema de información o del servicio para el uso del
+                       sistema de información o servicio;<br>
+                    b) Verificar que el nivel de acceso otorgado es apropiado a las políticas de acceso y es coherente 
+                       con otros requisitos, tales como separación de deberes;<br>
+                    c) Asegurar que los derechos de acceso no estén activados antes de que los procedimientos de
+                       autorización estén completos;<br>
+                    d) Mantener un registro central de los derechos de acceso suministrados a una identificación de 
+                       usuario para acceder a sistemas de información y servicios;<br>
+                    e) Adaptar los derechos de acceso de usuarios que han cambiado de roles o de empleo, y retirar o bloquear
+                       inmediantamente los derechos de acceso de los usuarios que han dejado la organización;<br>
+                    f) Revisar periódicamente los derechos de acceso con los propietarios de los sistemas de
+                       información o servicios.<br>     
+  
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.2.3</strong></h3>
+              <p>Revisar la asignación de derechos de acceso privilegiado a través de un proceso de autorización
+                 formal de acuerdo con la política de control de acceso pertinente.
+                 El proceso debe incluir los siguientes pasos:<br>
+                    a) Identificar los derechos de acceso privilegiado asociados con cada sistema o proceso,
+                       (sistema operativo, sistema de gestión de bases de datos, y cada aplicación)
+                       y los usuarios a los que es necesario asignar;<br>
+                    b) Definir o establecer los derechos de acceso privilegiado a usuarios con base en la necesidad de
+                       uso y caso por caso, alineada con la política de control de acceso;<br>
+                    c) Mantener un proceso de autorización y un registro de todos los privilegios asignados. Sólo se
+                       debe suministrar derechos de acceso cuando el proceso de autorización esté completo;<br>
+                    d) Definir los requisitos para la expiración de los derechos de acceso privilegiado;<br>
+                    e) Establecer los derechos de acceso privilegiado a través de una identificación de usuario
+                       diferente de la usada para las actividades regulares del negocio. Las actividades regulares del
+                       negocio no se  ejecutan desde una identificación privilegiada;<br>
+                    f) Tener las competencias de los usuarios con derechos de acceso privilegiado y su revisión 
+                       periódica para verificar si están en línea con sus deberes;<br>
+                    g) Establecer y mantener procedimientos genéricos para evitar el uso no autorizado de
+                       identificaciones de usuario de administración genérica, de acuerdo con las
+                       capacidades de configuración del sistema;<br>
+                    h) Establecer la confidencialidad de la información de autenticación secreta, para las
+                       identificaciones de usuario de administración genérica, cuando se comparta 
+                       (cambiar las contraseñas con frecuencia, y cuando un usuario privilegiado ha dejado el trabajo
+                       o cambia de trabajo, comunicarlas entre los usuarios privilegiados con los mecanismos apropiados).<br>   
+  
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.2.4</strong></h3>
+              <p>Revisar el proceso, que incluya:<br>
+                  a) Establecer la firma de una declaración para mantener confidencial la información de
+                     autenticación secreta personal, y mantener la información de autenticación secreta del grupo 
+                     (cuando es compartida) únicamente dentro de los miembros del grupo; esta declaración firmada 
+                     se puede incluir en los términos y condiciones del empleo para todos los que los usuarios;<br>
+                  b) Estipular que todos los usuarios deben mantener su propia información de autenticación
+                     secreta, y se les suministra una autentificación secreta temporal segura, que se obligue a cambiar
+                     al usarla por primera vez;<br>
+                  c) Establecer procedimientos para verificar la identidad de un usuario antes de proporcionarle la
+                     nueva información de autenticación secreta de reemplazo o temporal;<br>
+                  d) Definir que la información de autenticación secreta temporal se  suministra a los usuarios de
+                     una manera segura; y se evitar utilizar  partes externas o de mensajes de correo electrónico no
+                     protegidos (texto claro);<br>
+                  e) Establecer que la información de autenticación secreta temporal es única para un individuo y no
+                     es fácil de adivinar;<br>
+                  f) Definir que los usuarios deben acusar recibo de la información de autenticación secreta;<br>
+                  g) Establecer que la información de autenticación secreta por defecto, del fabricante, se modifica 
+                     después de la instalación de los sistemas o software.<br>
+  
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.2.5</strong></h3>
+              <p>Revisar los derechos de acceso que incluya:<br>
+                  a) Examinar los derechos de acceso de los usuarios periódicamente y después de cualquier 
+                     cambio, promoción, cambio a un cargo a un nivel inferior, o terminación del empleo;<br>
+                  b) Establecer que los derechos de acceso de usuario se revisan y reasignan cuando pasan de un rol 
+                     a otro dentro de la misma organización;<br>
+                  c) Definir las autorizaciones para los derechos de acceso privilegiado y revisar periódicamente;<br>
+                  d) Verificar las asignaciones de privilegios periódicamente, para asegurar que no se hayan
+                     obtenido privilegios no autorizados;<br>
+                  e) Revisar y registrar los cambios a las cuentas privilegiadas periódicamente.<br>                
+  
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.2.6</strong></h3>
+              <p>Revisar los derechos de acceso a la información y a los activos asociados con instalaciones de
+                 procesamiento de información, antes de que el empleo termine o cambie, dependiendo de la
+                 evaluación de factores de riesgo que incluya:<br>
+                    a) Terminación o cambio lo inicia el empleado, el usuario de la parte externa o la dirección, y la
+                       razón de la terminación;<br>
+                    b) Revisar las responsabilidades actuales del empleado, el usuario de la parte externa o cualquier
+                       otro usuario;<br>
+                    c) Verificar el valor de los activos accesibles en la actualidad.<br>
+                            
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.3.1</strong></h3>
+              <p>Revisar si el proceso de notificación a usuarios incluye:<br>
+                  a) Mantener la confidencialidad de la información de autenticación secreta, asegurándose de que
+                     no sea divulgada a ninguna otra parte, incluidas las personas con autoridad;<br>
+                  b) Evitar llevar un registro (en papel, en un archivo de software o en un dispositivo portátil) de
+                     autenticación secreta, a menos que se pueda almacenar en forma segura y que el método de 
+                     almacenamiento haya sido aprobado (una bóveda para contraseñas);<br>
+                  c) Cambiar la información de autenticación secreta siempre que haya cualquier indicio de que se
+                     pueda comprometer la información;<br>
+                  d) Definir que cuando se usa contraseñas como información de autenticación secreta, se debe
+                     seleccionar contraseñas seguras con una longitud mínima suficiente que:<br>
+                        1) Sean fáciles de recordar;<br>
+                        2) No estén basadas en algo que otra persona pueda adivinar fácilmente u obtener usando
+                           información relacionada con la persona, (nombres, números de teléfono y fechas de nacimiento, etc.);<br>
+                        3) No sean vulnerables a ataques de diccionario (es decir, no contienen palabras incluidas en los
+                           diccionarios);<br>
+                        4) Estén libres de caracteres completamente numéricos o alfabéticos idénticos consecutivos;<br>
+                        5) Si son temporales, cambiarlos la primera vez que se ingrese;<br>
+                  e) No compartir información de autenticación secreta del usuario individual;<br>
+                  f) Establecer una protección apropiada de contraseñas cuando se usan éstas como información de
+                     autenticación secreta en procedimientos de ingreso automatizados, y estén almacenadas;<br>
+                  g) No usar la misma información de autenticación secreta para propósitos de negocio y otros
+                     diferentes de estos.<br>
+                     
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.4.1</strong></h3>
+              <p>Revisar las restricciones de acceso a través de la aplicación individual del negocio y de acuerdo con
+                 la política de control de acceso definida; que incluya:<br>
+                    a) Suministrar menús para controlar el acceso a las funciones de sistemas de aplicaciones;<br>
+                    b) Controlar a qué datos puede tener acceso un usuario particular;<br>
+                    c) Controlar los derechos de acceso de los usuarios, (a leer, escribir, borrar y ejecutar);<br>
+                    d) Controlar los derechos de acceso de otras aplicaciones;<br>
+                    e) Limitar la información contenida en los elementos de salida;<br>
+                    f) Proveer controles de acceso físico o lógico para el aislamiento de aplicaciones, datos
+                       de aplicaciones o sistemas críticos.<br>
+                 
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.4.2</strong></h3>
+              <p>Revisar el procedimiento de ingreso que incluya:<br>
+                  a) No visualizar los identificadores del sistema o de la aplicación sino hasta que el proceso
+                     de ingreso se haya completado exitosamente;<br>
+                  b) Visualizar una advertencia general acerca de que sólo los usuarios autorizados pueden acceder
+                     al computador;<br>
+                  c) Evitar los mensajes de ayuda durante el procedimiento de ingreso, que ayudarían a un usuario
+                     no autorizado;<br>
+                  d) Validar la información de ingreso solamente al completar todos los datos de entrada. ante una
+                     condición de error, el sistema no debe indicar qué parte de los datos es correcta o incorrecta;<br>
+                  e) Proteger contra intentos de ingreso mediante fuerza bruta;<br>
+                  f) Llevar un registro con los intentos exitosos y fallidos;<br>
+                  g) Declarar un evento de seguridad si se detecta un intento potencial o una violación exitosa de los
+                     controles de ingreso;<br>
+                  h) Visualizar la siguiente información al terminar un ingreso seguro:<br>
+                    1) Registrar la fecha y la hora del ingreso previo exitoso;<br>
+                    2) Registrar los detalles de cualquier intento de ingreso no exitoso desde el último ingreso exitoso;<br>
+                  i) No visualizar una contraseña que se esté ingresando;<br>
+                  j) No transmitir contraseñas en un texto claro en una red;<br>
+                  k) Terminar sesiones inactivas después de un período de inactividad definido, especialmente en
+                     lugares de alto riesgo tales como áreas públicas o externas por fuera de la gestión de seguridad de
+                     la organización o en dispositivos móviles;<br>
+                  l) Restringir los tiempos de conexión para brindar seguridad adicional para aplicaciones de alto
+                     riesgo y para reducir la ventana de oportunidad para acceso no autorizado.<br>
+            
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.4.3</strong></h3>
+              <p>Revisar el sistema de gestión de contraseñas que incluya:<br>
+                  a) Cumplir el uso de identificaciones y contraseñas de usuarios individuales para mantener la
+                     rendición de cuentas;<br>
+                  b) Permitir que los usuarios seleccionen y cambien sus propias contraseñas e incluyan un
+                     procedimiento de confirmación para permitir los errores de entrada;<br>
+                  c) Exigir por que se escojan contraseñas de calidad;<br>
+                  d) Forzar a los usuarios cambiar sus contraseñas cuando ingresan por primera vez;<br>
+                  e) Exigir por que se cambien las contraseñas en forma regular, según sea necesario;<br>
+                  f) Llevar un registro de las contraseñas usadas previamente, e impedir su reusó;<br>
+                  g) No visualizar contraseñas en la pantalla cuando se está ingresando;<br>
+                  h) Almacenar los archivos de las contraseñas separadamente de los datos del sistema de 
+                     aplicaciones;<br>
+                  i) Almacenar y transmitir las contraseñas en forma protegida.<br>             
+            
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.4.4</strong></h3>
+              <p>Revisar las directrices para el uso de programas utilitarios con la capacidad de anular los controles
+                 de sistemas y de aplicaciones, que incluyan.<br>
+                    a) Utilizar procedimientos de identificación, autenticación y autorización para los programas utilitarios;<br>
+                    b) Separar los programas utilitarios del software de aplicaciones;<br>
+                    c) Limitar el uso de programas utilitarios al número mínimo práctico de usuarios confiables y autorizados;<br>
+                    d) Autorizar el uso adhoc de programas utilitarios;<br>
+                    e) Limitar la disponibilidad de los programas utilitarios;<br>
+                    f) Registrar el uso de los programas utilitarios;<br>
+                    g) Definir y documentar los niveles de autorización para los programas utilitarios;<br>
+                    h) Retirar o deshabilitar todos los programas utilitarios innecesarios;<br>
+                    i) No poner a disposición los programas utilitarios a los usuarios que tengan acceso a aplicaciones
+                       en sistemas en donde se requiera la separación de deberes.<br>
+          
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T 1.4.5</strong></h3>
+              <p>Revisar el procedimiento para la gestión de códigos fuente de los programas, que incluya:<br>
+                  a) Definir en donde sea posible, las librerías de fuentes de programas no se deben mantener en los
+                     sistemas operativos;<br>
+                  b) Gestionar los códigos fuente de los programas y las librerías de las fuentes de los programas se
+                     debería hacer de acuerdo con procedimientos establecidos;<br>
+                  c) Establecer que el personal de soporte deben tener acceso restringido a las librerías de las
+                     fuentes de los programas;<br>
+                  d) Definir que la actualización de las librerías de fuentes de programas y elementos asociados, y la
+                     entrega de fuentes de programas a los programadores sólo se deben hacer una vez que se haya
+                     recibido autorización apropiada;<br>
+                  e) Establecer que los listados de programas se deben mantener en un entorno seguro;<br>
+                  f) Conservar un registro de auditoría de todos los accesos a la librerías de fuentes de programas;<br>
+                  g) Mantener y copiar las bibliotecas de fuentes de programas a través de procedimientos estrictos
+                     de control de cambios.<br>
+          
+              </p>
+            </div>
+
+            <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+
+          </div>
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.1.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Política de control de acceso </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe establecer, documentar y revisar una política de control de acceso con base en los requisitos del negocio y de seguridad de la información.</h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez definido </h3>
+            <h3><strong>ISO:</strong> A.9.1.1</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.DS-5</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p1" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.1.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de TICs </h3>
+            <h3><strong>ITEM:</strong> Acceso a redes y a servicios en red </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe permitir acceso de los usuarios a la red y a los servicios de red para los que hayan sido autorizados específicamente</h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+            <h3><strong>ISO:</strong> A.9.1.2</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-4, PR.DS-5, PR.PT-3</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p2" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.2.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Registro y cancelación del registro de usuarios </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe implementar un proceso formal de registro y de cancelación de registro de usuarios, para posibilitar la asignación de los derechos de acceso.</h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.2.1</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-1</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p3" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.2.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong>  Suministro de acceso de usuarios </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe implementar un proceso de suministro de acceso formal de usuarios para asignar o revocar los derechos de acceso a todo tipo de usuarios para todos los sistemas y servicios. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.2.2</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-1</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p4" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.2.3</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong>  Gestión de derechos de acceso privilegiado </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe restringir y controlar la asignación y uso de derechos de acceso privilegiado. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.2.3</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-4, PR.DS-5</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p5" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.2.4</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong>  Gestión de información de autenticación secreta de usuarios </h3>
+  
+            <h3><strong>Descripción:</strong> La asignación de información de autenticación secreta se debe controlar por medio de un proceso de gestión formal. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.2.4</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-1</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p6" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.2.5</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong>  Revisión de los derechos de acceso de usuarios </h3>
+  
+            <h3><strong>Descripción:</strong> Los propietarios de los activos deben revisar los derechos de acceso de los usuarios, a intervalos regulares. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.2.5</h3>
+            <h3><strong>Ciberseguridad:</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p7" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.2.6</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Retiro o ajuste de los derechos de acceso </h3>
+  
+            <h3><strong>Descripción:</strong> Los derechos de acceso de todos los empleados y de usuarios externos a la información y a las instalaciones de procesamiento de información se deben retirar al terminar su empleo, contrato o acuerdo, o se deben ajustar cuando se hagan cambios. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.2.6</h3>
+            <h3><strong>Ciberseguridad:</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p8" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.3.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Uso de información de autenticación secreta </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe exigir a los usuarios que cumplan las prácticas de la organización para el uso de información de autenticación secreta. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+            <h3><strong>ISO:</strong> A.9.3.1</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-1</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p9" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.4.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Restricción de acceso a la información </h3>
+  
+            <h3><strong>Descripción:</strong> El acceso a la información y a las funciones de los sistemas de las aplicaciones se debería restringir de acuerdo con la política de control de acceso. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.4.1</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-4, PR.DS-5</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p10" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.4.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Procedimiento de ingreso seguro </h3>
+  
+            <h3><strong>Descripción:</strong> Cuando lo requiere la política de control de acceso, el acceso a sistemas y aplicaciones se debe controlar mediante un proceso de ingreso seguro. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.4.2</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-1</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p11" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.4.3</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de TICs </h3>
+            <h3><strong>ITEM:</strong> Sistema de gestión de contraseñas </h3>
+  
+            <h3><strong>Descripción:</strong> Los sistemas de gestión de contraseñas deben ser interactivos y deben asegurar la calidad de las contraseñas. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.4.3</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-1</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p12" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.4.4</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de TICs </h3>
+            <h3><strong>ITEM:</strong> Uso de programas utilitarios privilegiados </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe restringir y controlar estrictamente el uso de programas utilitarios que pudieran tener capacidad de anular el sistema y los controles de las aplicaciones. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.4.4</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.AC-4, PR.DS-5</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p13" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 1.4.5</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de TICs </h3>
+            <h3><strong>ITEM:</strong> Control de acceso a códigos fuente de programas </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe restringir el acceso a los códigos fuente de los programas. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.9.4.5</h3>
+            <h3><strong>Ciberseguridad:</strong> PR.DS-5</h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p14" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+          <p (click)="controlT1=!controlT1" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+        </div>
+  
+        
+      </div>
+  
+      <div class="container-general">
+  
+        <h3><strong>ID Item:</strong> T.2 <strong>Calificacion:</strong> {{t2 | number:'2.1-2'}}</h3>
+        <p (click)="controlT2=!controlT2" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlT2 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT2">
+          <h3><strong>Apartado:</strong> Criptografía</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+          <h3><strong>ITEM:</strong> Criptografía </h3>
+  
+          <h3><strong>Descripción:</strong> Marco de referencia de gestión para iniciar y controlar la implementación y la operación de la seguridad de la información dentro de la organización </h3>
+          <h3><strong>MSPI:</strong></h3>
+          <h3><strong>ISO:</strong> A.10</h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Pruebas:</strong> <p [style]="{'color': 'blue','cursor':'pointer'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>T.2.1.1</strong></h3>
+              <p>Revisar la política sobre el uso de la criptográfica, que incluya:<br>
+                  a) Establecer el enfoque de la dirección con relación al uso de controles criptográficos en toda la 
+                     organización, incluyendo los principios generales bajo los cuales se deben proteger la  información
+                     del negocio;<br>
+                  b) Realizar una valoración de riesgos, que identifique el nivel de protección requerida, teniendo en
+                     cuenta el tipo, fortaleza y calidad del algoritmo de encriptación requerido;<br>
+                  c) Utilizar la encriptación para la protección de información transportada por dispositivos de
+                     encriptación móviles o removibles, o a través de líneas de comunicación;<br>
+                  d) Gestionar las llaves y los métodos para la protección de llaves criptográficas y la recuperación de
+                     información encriptada, en el caso de llaves perdidas, llaves cuya seguridad está comprometida,
+                     o que están dañadas;<br>
+                  e) Establecer roles y responsabilidades, quién es responsable por:<br>
+                        1) La implementación de la política.<br>
+                        2) La gestión de llaves, incluida la generación de llaves;<br>
+                  f) Establecer las normas que se van a adoptar para la implementación efectiva en toda la
+                     organización (procesos del negocio);<br>
+                  g) Definir el impacto de usar información encriptada en los controles que dependen de la
+                     inspección del contenido.<br>
+          
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>T.2.1.2</strong></h3>
+              <p>Revisar el sistema de gestión de llaves que debe estar basado en un grupo establecido de normas,
+                 procedimientos y métodos seguros para:<br>
+                    a) Generar llaves para diferentes sistemas criptográficos y diferentes aplicaciones;<br>
+                    b) Generar y obtener certificados de llaves públicas;<br>
+                    c) Distribuir llaves a las entidades previstas, incluyendo la forma de recibir y activar las llaves;<br>
+                    d) Almacenar las llaves, incluyendo la forma en que los usuarios autorizados obtienen acceso a ellas;<br>
+                    e) Cambiar o actualizar las llaves, incluyendo las reglas sobre cuándo se deben cambiar y cómo hacerlo;<br>
+                    f) Dar tratamiento a las llaves cuya seguridad está comprometida;<br>
+                    g) Revocar las llaves, incluyendo la forma de retirarlas o desactivarlas,  cuando la seguridad de las
+                       llaves ha estado comprometida, o cuando un usuario deja la organización;<br>
+                    h) Recuperar las llaves que estén perdidas o dañadas;<br>
+                    i) Hacer copias de respaldo de las llaves o archivarlas;<br>
+                    j) Destruir las llaves;<br>
+                    k) Registrar y auditar las actividades relacionadas con gestión de llaves.<br>
+              
+              </p>
+            </div>
+  
+          <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+  
+          </div>
+  
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 2.1.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Política sobre el uso de controles criptográficos </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe desarrollar e implementar una política sobre el uso de controles criptográficos para la protección de la información. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente </h3>
+            <h3><strong>ISO:</strong> A.10.1.1 </h3>
+            <h3><strong>Ciberseguridad:</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p15" (ngModelChange)="calculoT2()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> T 2.1.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Gestión de llaves </h3>
+  
+            <h3><strong>Descripción:</strong> Se debe desarrollar e implementar una política sobre el uso, protección y tiempo de vida de las llaves criptográficas durante todo su ciclo de vida. </h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+            <h3><strong>ISO:</strong> A.10.1.2</h3>
+            <h3><strong>Ciberseguridad:</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p16" (ngModelChange)="calculoT2()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+        <p (click)="controlT2=!controlT2" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+        </div>
+      </div>
+  
+      <div class="container-general">
+  
+        <h3><strong>ID Item:</strong> T.3 <strong>Calificacion:</strong> {{t3 | number:'2.1-2'}}</h3>
+        <p (click)="controlT3=!controlT3" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlT3 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT3">
+          <h3><strong>Apartado:</strong> Seguridad física y del entorno</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de la seguridad física/Responsable de SI/Líderes de los procesos </h3>
+          <h3><strong>ITEM:</strong> Seguridad física y del entorno </h3>
+  
+          <h3><strong>Descripción:</strong> Prevenir el acceso físico no autorizado, el daño y la interferencia a la información y a las instalaciones de procesamiento de información de la organización.</h3>
+          <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+          <h3><strong>ISO:</strong> A.11</h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Pruebas:</strong> <p [style]="{'color': 'blue','cursor':'pointer'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>T.3.1.1</strong></h3>
+              <p>Revisar las directrices relacionadas con los perímetros de seguridad física:<br>
+                  a) Definir los perímetros de seguridad, y el emplazamiento y fortaleza de cada uno de los
+                     perímetros deben depender de los requisitos de seguridad de los activos dentro del perímetro y
+                     de los resultados de una valoración de riesgos;<br>
+                  b) Establecer los perímetros de una edificación o sitio que contenga instalaciones de
+                     procesamiento de la información debe ser físicamente seguros; el techo exterior, las paredes y el
+                     material de los pisos del sitio deben ser de construcción sólida, y todas las paredes externas deben
+                     estar protegidas adecuadamente contra acceso no autorizado con mecanismos de control (barras, alarmas,
+                     cerraduras); las puertas y ventanas deben estar cerradas con llave cuando no hay supervisión,
+                     y se debe considerar protección externa para ventanas, particularmente al nivel del suelo;<br>
+                  c) Definir un área de recepción con vigilancia u otro medio para controlar el acceso físico al sitio o
+                     edificación; el acceso a los sitios y edificaciones debe estar restringido únicamente para personal autorizado;<br>
+                  d) Establecer cuando sea aplicable y construir barreras físicas para impedir el acceso físico no
+                     autorizado y la contaminación ambiental;<br>
+                  e) Establecer que todas las puertas contra incendio en un perímetro de seguridad deben tener
+                     alarmas, estar monitoreadas y probadas junto con las paredes, para establecer el nivel requerido
+                     de resistencia de acuerdo con normas regionales, nacionales e internacionales adecuadas; deben
+                     funcionar de manera segura de acuerdo al código local de incendios;<br>
+                  f) Instalar sistemas adecuados para detección de intrusos de acuerdo con normas nacionales,
+                     regionales o internacionales y se deben probar regularmente para abarcar todas las puertas 
+                     externas y ventanas accesibles; las áreas no ocupadas deben tener alarmas en todo momento; 
+                     también deben abarcar otras áreas, tales como las salas de computo o las salas de comunicaciones;<br>
+                  g) Establecer que las instalaciones de procesamiento de información gestionadas por la 
+                     organización deben estar separadas físicamente de las gestionadas por partes externas.<br>
+                
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>T.3.1.2</strong></h3>
+              <p>Revisar los controles de acceso físico y las siguientes directrices:<br> 
+                  a) Tener un registro de la fecha y hora de entrada y salida de los visitantes, y todos los visitantes 
+                     deben ser supervisados a menos que su acceso haya sido aprobado previamente; solo se les debe 
+                     otorgar acceso para propósitos específicos autorizados y se deben emitir instrucciones sobre los 
+                     requisitos de seguridad del área y de los propósitos de emergencia. La identidad de los visitantes 
+                     se deben autenticar por los medios apropiados;<br>
+                  b) Establecer que el acceso a las áreas en las que se procesa o almacena información confidencial 
+                     se debería restringir a los individuos autorizados solamente mediante la implementación de 
+                     controles de acceso apropiados, (mediante la implementación de un mecanismo de autenticación 
+                     de dos factores, tales como una tarjeta de acceso y un PIN secreto);<br>
+                  c) Mantener y hacer seguimiento de un libro de registro (physical log book) físico o un rastro de 
+                     auditoría electrónica de todos los accesos;<br>
+                  d) Definir que todos los empleados, contratistas y partes externas deben portar algún tipo de 
+                     identificación visible, y se deben notificar de inmediato al personal de seguridad si se encuentran 
+                     visitantes no acompañados, y sin la identificación visible;<br> 
+                  e) Establecer que el personal de servicio de soporte de la parte externa se le debería otorgar 
+                     acceso restringido a áreas seguras o a instalaciones de procesamiento de información confidencial 
+                     solo cuando se requiera; este acceso se deben autorizar y se le debe hacer seguimiento;<br> 
+                  f) Definir los derechos de acceso a áreas seguras se deben revisar y actualizar regularmente, y 
+                     revocar cuando sea necesario.<br> 
+                
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>T.3.1.3</strong></h3>
+              <p>Revisar las siguientes directrices relacionadas con la seguridad a oficinas, recintos e instalaciones:<br> 
+                  a) Establecer que las instalaciones clave deben estar ubicadas de manera que se impida el acceso del público;<br> 
+                  b) Definir donde sea aplicable, las edificaciones deben ser discretas y dar un indicio mínimo de su 
+                     propósito, sin señales obvias externas o internas, que identifiquen la presencia de actividades de 
+                     procesamiento de información;<br> 
+                  c) Establecer que las instalaciones deben estar configuradas para evitar que las actividades o 
+                     información confidenciales sean visibles y audibles desde el exterior. El blindaje electromagnético 
+                     también se debe ser el apropiado;<br> 
+                  d) Definir los directorios y guías telefónicas internas que identifican los lugares de las instalaciones 
+                     de procesamiento de información confidencial no deben ser accesibles a ninguna persona no autorizada.<br> 
+                
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>T.3.1.4</strong></h3>
+              <p>De acuerdo a la NIST deben identificarse los elementos de resiliencia para soportar la entrega de 
+                 los servicios críticos de la entidad.<br>
+                
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>T.3.1.5</strong></h3>
+              <p>Revisar trabajo en área segura y las siguientes directrices:<br>
+                  a) Establecer que el personal solo debe conocer de la existencia de un área segura o de actividades 
+                     dentro de un área segura, con base en lo que necesita conocer;<br> 
+                  b) Definir que el trabajo no supervisado en áreas seguras se debe evitar tanto por razones de 
+                     seguridad como para evitar oportunidades para actividades malintencionadas;<br>
+                  c) Establecer que las áreas seguras vacías deben estar cerradas con llave y se revisan periódicamente;<br> 
+                  d) No se permite el ingreso y uso de equipo fotográfico, de video, audio u otro equipo de 
+                     grabación, tales como cámaras en dispositivos móviles, a menos que se cuente con autorización para ello.<br> 
+
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.1.6</strong></h3>
+              <p>Revisar las siguientes directrices:<br> 
+                  a) Establecer que el acceso al área de despacho y de carga desde el exterior de la edificación se 
+                     debería restringir al personal identificado y autorizado;<br> 
+                  b) Definir que el área de despacho y carga se debe diseñar de manera que los suministros se 
+                     puedan cargar y descargar sin que el personal de despacho tenga acceso a otras partes de la edificación;<br> 
+                  c) Establecer que las puertas externas de un área de despacho y carga se aseguran cuando las 
+                     puertas internas están abiertas;<br> 
+                  d) Definir que el material que ingresa se inspecciona y examina para determinar la presencia de 
+                     explosivos, químicos u otros materiales peligrosos, antes de que se retiren del área de despacho y carga;<br> 
+                  e) Establecer que el material que ingresa se registra de acuerdo con los procedimientos de gestión 
+                     de activos al entrar al sitio;<br> 
+                  f) Definir que los despachos entrantes y salientes se están separados físicamente, en donde sea posible;<br> 
+                  g) Establecer que el material entrante se inspecciona para determinar evidencia de manipulación 
+                     durante el viaje. Si se descubre esta manipulación, se debería reportar de inmediato al personal de seguridad.<br> 
+
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.1</strong></h3>
+              <p>Revisar las siguientes directrices para proteger los equipos:<br> 
+                a) Establecer que los equipos están ubicados de manera que se minimice el acceso innecesario a las áreas de trabajo;<br>  
+                b) Definir que las instalaciones de procesamiento de la información que manejan datos sensibles 
+                   están ubicadas cuidadosamente para reducir el riesgo de que personas no autorizadas puedan ver 
+                   la información durante su uso;<br>  
+                c) Establecer que las instalaciones de almacenamiento se aseguran para evitar el acceso no autorizado; <br> 
+                d) Definir que los elementos que requieren protección especial se salvaguardan para reducir el 
+                   nivel general de protección requerida;<br>  
+                e) Establecer los controles para minimizar el riesgo de amenazas físicas y ambientales, (robo, 
+                   incendio, explosivos, humo, agua (o falla en el suministro de agua, polvo, vibración, 
+                   efectos químicos, interferencia en el suministro eléctrico, interferencia en las comunicaciones, 
+                   radiación electromagnética y vandalismo);<br>  
+                f) Establecer directrices acerca de comer, consumir líquidos y fumar en cercanías 
+                   de las instalaciones de procesamiento de información; <br> 
+                g) Hacer seguimiento de las condiciones ambientales tales como temperatura y humedad, para 
+                   determinar las condiciones que puedan afectar adversamente las instalaciones de procesamiento de información;<br>  
+                h) Proteger contra descargas eléctricas atmosféricas se debe aplicar a todas las edificaciones y se 
+                   deben colocar filtros a todas las líneas de comunicaciones y de potencia entrantes, para la 
+                   protección contra dichas descargas; <br> 
+                i) Considerar el uso de métodos de protección especial, tales como membranas para teclados, para 
+                   equipos en ambientes industriales;<br>  
+                j) Proteger los equipos para procesamiento de información confidencial para minimizar el riesgo 
+                   de fuga de información debido a emanaciones electromagnéticas.<br>  
+                
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.2</strong></h3>
+              <p>Revisar los servicios de suministro (electricidad, telecomunicaciones, suministro de agua, gas, 
+                 alcantarillado, ventilación y aire acondicionado) para que cumplan:<br> 
+                a) Cumplir con las especificaciones de los fabricantes de equipos y con los requisitos legales locales; <br>
+                b) Evaluar regularmente en cuanto a su capacidad para estar al ritmo del crecimiento e 
+                   interacciones del negocio con otros servicios de soporte; <br>
+                c) Inspeccionar y probar regularmente para asegurar su funcionamiento apropiado; <br>
+                d) Si es necesario, contar con alarmas para detectar mal funcionamiento; <br>
+                e) Si es necesario, tener múltiples alimentaciones con diverso enrutador físico. <br>
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.3</strong></h3>
+              <p>Revisar las siguientes directrices para seguridad del cableado:<br> 
+                a) Establecer que las líneas de potencia y de telecomunicaciones que entran a instalaciones de 
+                   procesamiento de información deben ser subterráneas en donde sea posible, o deben contar con 
+                   una protección alternativa adecuada; <br>
+                b) Establecer que los cables de potencia están separados de los cables de comunicaciones para evitar interferencia; <br>
+                c) Definir para sistemas sensibles o críticos los controles adicionales que se deben considerar incluyen:<br> 
+                1) La instalación de conduit apantallado y recintos o cajas con llave en los puntos de inspección y de terminación; <br>
+                2) El uso de blindaje electromagnético para proteger los cables; <br>
+                3) El inicio de barridos técnicos e inspecciones físicas de dispositivos no autorizados que se conectan a los cables.<br>
+                
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.4</strong></h3>
+              <p>Revisar las siguientes directrices para mantenimiento de equipos:<br> 
+                a) Mantener los equipos de acuerdo con los intervalos y especificaciones de servicio recomendados por el proveedor;<br> 
+                b) Establecer que solo el personal de mantenimiento autorizado debería llevar a cabo las 
+                   reparaciones y el servicio a los equipos;<br> 
+                c) Llevar registros de todas las fallas reales o sospechadas, y de todo el mantenimiento preventivo y correctivo; <br>
+                d) Implementar los controles apropiados cuando el equipo está programado para mantenimiento, 
+                   teniendo en cuenta si éste lo lleva a cabo el personal en el sitio o personal externo a la 
+                   organización; en donde sea necesario, la información confidencial se debe borrar del equipo, 
+                   o el personal de mantenimiento debería retirarse (cleared) lo suficientemente de la información;<br> 
+                e) Cumplir todos los requisitos de mantenimiento impuestos por las políticas de seguros; <br>
+                f) Establecer que antes de volver a poner el equipo en operación después de mantenimiento, 
+                   se debería inspeccionar para asegurarse de que no ha sido alterado y que su funcionamiento es adecuado.<br> 
+              
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.5</strong></h3>
+              <p>Revisar las siguientes directrices para el retiro de activos:<br> 
+                a) Identificar a los empleados y usuarios de partes externas que tienen autoridad para permitir el 
+                   retiro de activos del sitio; <br> 
+                b) Establecer los límites de tiempo para el retiro de activos y verificar que se cumplen las devoluciones;<br>  
+                c) Definir cuando sea necesario y apropiado, registrar los activos se retiran del sitio y cuando se hace su devolución; <br> 
+                d) Documentar la identidad, el rol y la filiación de cualquiera que maneje o use activos, y devolver 
+                   esta documentación con el equipo, la información y el software.<br>   
+
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.6</strong></h3>
+              <p>De acuerdo a la NIST se deben catalogar los sistemas de información externos.
+                Revisar las siguientes directrices para proteger los equipos fuera de las instalaciones:<br> 
+                a) Establecer que los equipos y medios retirados de las instalaciones no se deben dejar sin 
+                   vigilancia en lugares públicos;<br> 
+                b) Seguir en todo momento las instrucciones del fabricante para proteger los equipos, (contra exposición 
+                   a campos electromagnéticos fuertes);<br> 
+                c) Controlar los lugares fuera de las instalaciones, tales como trabajo en la casa, teletrabajo y sitios 
+                   temporales se deben determinar mediante una valoración de riesgos y se deben aplicar los 
+                   controles adecuados según sean apropiados, (gabinetes de archivo con llave, política de escritorio 
+                   limpio, controles de acceso para computadores y comunicación segura con la oficina);<br> 
+                d) Establecer que cuando el equipo que se encuentra afuera de las instalaciones es transferido 
+                   entre diferentes individuos y partes externas, llevar un registro que defina la cadena de custodia 
+                   para el equipo, que incluya al menos los nombres y las organizaciones de los responsables del equipo.<br> 
+                   
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.7</strong></h3>
+              <p>Revisar las siguientes directrices del proceso de borrado de discos y de encriptación del disco 
+                 (para evitar la divulgación de la información confidencial cuando se dispone del equipo o se le da un 
+                 destino diferente, siempre y cuando):<br> 
+                a) Establecer que el proceso de encriptación sea suficientemente fuerte y abarque todo el disco 
+                   (incluido el espacio perdido, archivos temporales de intercambio, etc.);<br> 
+                b) Definir que las llaves de encriptación sean lo suficientemente largas para resistir ataques de fuerza bruta; <br>
+                c) Establecer que las llaves de encriptación se mantengan confidenciales.<br>                 
+                   
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.8</strong></h3>
+              <p>Revisar que el procedimiento equipos de usuarios desatendidos incluya:<br> 
+                a) Establecer que se cierren las sesiones activas cuando hayan terminado, a menos que se puedan 
+                   asegurar mediante un mecanismo de bloqueo apropiado (un protector de pantalla protegido con contraseña);<br> 
+                b) Establecer que es obligatorio salir de las aplicaciones o servicios de red cuando ya no los necesiten; <br>
+                c) Asegurar que los computadores o dispositivos móviles contra uso no autorizado mediante el 
+                   bloqueo de teclas o un control equivalente (acceso con contraseña, cuando no están en uso).<br> 
+                         
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.9</strong></h3>
+              <p>Revisar las siguientes directrices para escritorio limpio:<br> 
+                a) Establecer que la información sensible o crítica del negocio, 
+                   (sobre papel o en un medio de almacenamiento electrónico), se guarda bajo llave 
+                   (idealmente, en una caja fuerte o en un gabinete u otro mueble de seguridad) cuando no se requiera, 
+                   especialmente cuando la oficina esté desocupada;<br>
+                b) Definir un procedimiento para la gestión de equipos desatendidos; los computadores y 
+                   terminales deben estar fuera del sistema y estar protegidos con un sistema de bloqueo de la 
+                   pantalla y el teclado, controlado por una contraseña, token o mecanismo similar de 
+                   autenticación de usuario, y deben estar protegidos por bloqueo de teclas u otros controles, 
+                   cuando no están en uso; <br>
+                c) Evitar el uso no autorizado de fotocopiadoras y otra tecnología de reproducción (escáneres, cámaras digitales);<br> 
+                d) Establecer que los medios que contienen información sensible o clasificada se deben retirar de las impresoras inmediatamente.<br> 
+                 
+              </p>
+            </div>
+
+            <div>
+              <h3 class="subtitle"><strong>T.3.2.9</strong></h3>
+              <p>Revisar las siguientes directrices para escritorio limpio:<br> 
+                a) Establecer que la información sensible o crítica del negocio, 
+                   (sobre papel o en un medio de almacenamiento electrónico), se guarda bajo llave 
+                   (idealmente, en una caja fuerte o en un gabinete u otro mueble de seguridad) cuando no se requiera, 
+                   especialmente cuando la oficina esté desocupada;<br>
+                b) Definir un procedimiento para la gestión de equipos desatendidos; los computadores y 
+                   terminales deben estar fuera del sistema y estar protegidos con un sistema de bloqueo de la 
+                   pantalla y el teclado, controlado por una contraseña, token o mecanismo similar de 
+                   autenticación de usuario, y deben estar protegidos por bloqueo de teclas u otros controles, 
+                   cuando no están en uso; <br>
+                c) Evitar el uso no autorizado de fotocopiadoras y otra tecnología de reproducción (escáneres, cámaras digitales);<br> 
+                d) Establecer que los medios que contienen información sensible o clasificada se deben retirar de las impresoras inmediatamente.<br> 
+                 
+              </p>
+            </div>
+
+          <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+  
+        </div>
+  
+          <div class="container-items">
+            <h3><strong>ID Item:</strong> AD.3.1.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Gestion Humana </h3>
+            <h3><strong>ITEM:</strong> Selección e investigación de antecedentes </h3>
+  
+            <h3><strong>Descripción:</strong>Las verificaciones de los antecedentes de todos los candidatos a un empleo se deben llevar a cabo de acuerdo con las leyes, reglamentos y ética pertinentes, y deberían ser proporcionales a los requisitos de negocio, a la clasificación de la información a que se va a tener acceso, y a los riesgos percibidos.</h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+            <h3><strong>Ciberseguridad:</strong><strong> PR.DS-5</strong>,<strong>PR.IP-11</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p10" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.3.1.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Gestion Humana </h3>
+            <h3><strong>ITEM:</strong> Términos y condiciones del empleo </h3>
+  
+            <h3><strong>Descripción:</strong>Los acuerdos contractuales con empleados y contratistas, deben establecer sus responsabilidades y las de la organización en cuanto a la seguridad de la información.</h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+            <h3><strong>Ciberseguridad:</strong><strong> PR.DS-5</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p11" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.3.2.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+            <h3><strong>ITEM:</strong> Responsabilidades de la dirección </h3>
+  
+            <h3><strong>Descripción:</strong>La dirección debe exigir a todos los empleados y contratistas la aplicación de la seguridad de la información de acuerdo con las políticas y procedimientos establecidos por la organización.</h3>
+            <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+            <h3><strong>Ciberseguridad:</strong><strong> ID.GV-2</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p12" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.3.2.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI/Líderes de los procesos</h3>
+            <h3><strong>ITEM:</strong> Toma de conciencia, educación y formación en la seguridad de la información </h3>
+  
+            <h3><strong>Descripción:</strong>Todos los empleados de la Entidad, y en donde sea pertinente, los contratistas, deben recibir la educación y la formación en toma de conciencia apropiada, y actualizaciones regulares sobre las políticas y procedimientos pertinentes para su cargo.</h3>
+            <h3><strong>MSPI:</strong> Componente planeación
+              Modelo de Madurez Inicial</h3>
+            <h3><strong>Ciberseguridad:</strong><strong> PR.AT-1</strong>,<strong> PR.AT-2</strong>,<strong> PR.AT-3</strong>,<strong> PR.AT-4</strong>,<strong> PR.AT-5</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p13" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.3.2.3</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI</h3>
+            <h3><strong>ITEM:</strong> Proceso disciplinario </h3>
+  
+            <h3><strong>Descripción:</strong>Se debe contar con un proceso disciplinario formal el cual debería ser comunicado, para emprender acciones contra empleados que hayan cometido una violación a la seguridad de la información.</h3>
+            <h3><strong>MSPI:</strong></h3>
+            <h3><strong>Ciberseguridad:</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p14" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.3.3.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable de SI</h3>
+            <h3><strong>ITEM:</strong> Terminación o cambio de responsabilidades de empleo</h3>
+  
+            <h3><strong>Descripción:</strong>Las responsabilidades y los deberes de seguridad de la información que permanecen válidos después de la terminación o cambio de contrato se deberían definir, comunicar al empleado o contratista y se deberían hacer cumplir.</h3>
+            <h3><strong>MSPI:</strong></h3>
+            <h3><strong>Ciberseguridad:</strong><strong> PR.DS-5</strong>, <strong> PR.IP-11</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p15" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+          </div>
+        <p (click)="controlT3=!controlT3" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+  
+        </div>
+  
+      </div>
+  
+      <div class="container-general">
+  
+        <h3><strong>ID Item:</strong> AD.4 <strong>Calificacion:</strong> {{t4 | number:'2.1-2'}}</h3>
+        <p (click)="controlT4=!controlT4" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlT4 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT4">
+          <h3><strong>Apartado:</strong> Gestion de activos</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de SI</h3>
+          <h3><strong>ITEM:</strong> Gestiond de los activos </h3>
+          <h3><strong>MSPI:</strong>Modelo de madurez gestionado</h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Pruebas:</strong> <p [style]="{'color': 'blue','cursor':'pointer'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>AD.4.1.1</strong></h3>
+              <p>Solicite el inventario de activos de información, revisado y aprobado por la alta Dirección y revise: <br>
+                1) Ultima vez que se actualizó <br>
+                2) Que señale bajo algún criterio la importancia del activo <br>
+                3) Que señale el propietario del activo <br>
+                Indague quien(es) el(los) encargado(s) de actualizar y revisar el inventario de activos y cada cuanto se realiza esta revisión.
+                De acuerdo a NIST  se deben considerar como activos el personal, dispositivos, sistemas e instalaciones físicas que permiten a la entidad cumplir con su misión y objetivos, dada su importancia y riesgos estratégicos.
+                Tenga en cuenta para la calificación: <br>
+                1) Si Se identifican en forma general los activos de información de la Entidad, están en 40. <br>
+                2) Si se cuenta con un inventario de activos de información física y lógica de toda la entidad, documentado y firmado por la alta dirección, están en 60. <br>
+                3) Si se revisa y monitorean periódicamente los activos de información de la entidad, están en 80.
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.1.2</strong></h3>
+              <p>Solicite el procedimiento para asegurar la asignación oportuna de la propiedad de los activos. Tenga en cuenta que la propiedad se debería asignar cuando los activos se crean o cuando son entregados a la Entidad.
+                De acuerdo a las mejores prácticas el propietario de los activos (individuo o entidad, que es responsable por el activo) tiene las siguientes responsabilidades: <br>
+                a) asegurarse de que los activos están inventariados. <br>
+                b) asegurarse de que los activos están clasificados y protegidos apropiadamente. <br>
+                c) definir y revisar periódicamente las restricciones y clasificaciones de acceso a activos importantes, teniendo en cuenta las políticas de control de acceso aplicables. <br>
+                d) asegurarse del manejo apropiado del activo cuando es eliminado o destruido.
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.1.3</strong></h3>
+              <p>Pregunte por la política, procedimiento, directriz o lineamiento que defina el uso aceptable de los activos, verifique que es conocida por los empleados y usuarios de partes externas que usan activos de la Entidad o tienen acceso a ellos.
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.1.4</strong></h3>
+              <p>Revisar las políticas , normas , procedimientos y directrices relativas a los controles de seguridad de la información durante la terminación de la relación laboral por ejemplo, la devolución de los activos de información (equipos, llaves, documentos , datos, sistemas) , las llaves físicas y de cifrado, la eliminación de los derechos de acceso, etc. En caso de que un funcionario o tercero sea el dueño del activo indague como se asegura la transferencia de la información a la Entidad y el  borrado seguro de la información de la Entidad. <br>
+                En caso en que un empleado o usuario de una parte externa posea conocimientos que son importantes para las operaciones regulares, esa información se debería documentar y transferir a la Entidad. <br>
+                Durante el período de notificación de la terminación, la Entidad debería controlar el copiado no autorizado de la información pertinente (por ejemplo, la propiedad intelectual) por parte de los empleados o contratistas que han finalizado el empleo.
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.2.1</strong></h3>
+              <p>
+                Solicite el procedimiento mediante el cual se clasifican los activos de información y evalué: <br>
+                1) Que las convenciones y criterios de clasificación sean claros y estén documentados <br>
+                2) Que se defina cada cuanto debe revisarse la clasificación de un activo <br>
+                3) La clasificación debería valorarse analizando la confidencialidad, integridad y disponibilidad. <br>
+  
+                Solicite muestras de inventarios de activos de información clasificados y evalué que se aplican las políticas y procedimientos de clasificación definidos. Evalué si los procesos seleccionados aplican de manera consistente estas políticas y procedimientos.
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.2.2</strong></h3>
+              <p>
+                Solicite el procedimiento para el etiquetado de la información y evalúe: <br>
+                1) Aplica a activos en formatos físicos y electrónicos (etiquetas físicas, metadatos) <br>
+                2) Que refleje el esquema de clasificación establecido <br>
+                3) Que las etiquetas se puedan reconocer fácilmente <br>
+                4) Que los empleados y contratistas conocen el procedimiento de etiquetado
+                Revise en  una muestra de activos el correcto etiquetado
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.2.3</strong></h3>
+              <p>
+                Solicite los procedimientos para el manejo, procesamiento, almacenamiento y comunicación de información de conformidad con su clasificación.
+                De acuerdo a las mejores prácticas evidencie si se han considerado los siguientes asuntos: <br>
+                a) Restricciones de acceso que soportan los requisitos de protección para cada nivel de clasificación. <br>
+                b) Registro formal de los receptores autorizados de los activos. <br>
+                c) Protección de copias de información temporal o permanente a un nivel coherente con la protección de la información original. <br>
+                d) Almacenamiento de los activos de TI de acuerdo con las especificaciones de los fabricantes. <br>
+                e) Marcado claro de todas las copias de medios para la atención del receptor autorizado. <br>
+                f) De acuerdo a NIST la información almacenada (at rest) y en tránsito debe ser protegida.
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.3.1</strong></h3>
+              <p>
+                Solicite las directrices, guías, lineamientos y procedimientos para la gestión de medios removibles, que consideren: <br>
+                a) Si ya no se requiere, el contenido de cualquier medio reusable que se vaya a retirar de la organización se debe remover de forma que no sea recuperable. <br>
+                b) cuando resulte necesario y práctico, se debe solicitar autorización para retirar los medios de la organización, y se debe llevar un registro de dichos retiros con el fin de mantener un rastro de auditoría. <br>
+                d) si la confidencialidad o integridad de los datos se consideran importantes, se deben usar técnicas criptográficas para proteger los datos que se encuentran en los medios removibles. <br>
+                f) se deben guardar varias copias de los datos valiosos en medios separados, para reducir aún más el riesgo de daño o pérdida casuales de los datos. <br>
+                h) sólo se deben habilitar unidades de medios removibles si hay una razón de valida asociada a los procesos la Entidad para hacerlo. <br>
+                i) En donde hay necesidad de usar medios removibles, se debería hacer seguimiento a la transferencia de información a estos medios (Por ejemplo DLP)
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.3.2</strong></h3>
+              <p>
+                Solicite los procedimientos existentes para garantizar que los medios a desechar o donar, no contienen información confidencial que pueda ser consultada y copiada por personas no autorizadas.
+                <br>
+  V             Verifique si se ha realizado esta actividad y si existen registros de la misma.
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.4.3.3</strong></h3>
+              <p>
+                Solicite las directrices definidas para la protección de medios que contienen información durante el transporte. Verifique de acuerdo a las mejores prácticas que se contemple: <br>
+  
+                a) El uso de un transporte o servicios de mensajería confiables. <br>
+                b) Procedimientos para verificar la identificación de los servicios de mensajería. <br>
+                c) Indague y evidencie como es el embalaje el cual debe proteger el contenido contra cualquier daño físico que pudiera presentarse durante el tránsito, y de acuerdo con las especificaciones de los fabricantes, por ejemplo, protección contra cualquier factor ambiental que pueda reducir la eficacia de la restauración del medio, tal como exposición al calor, humedad o campos electromagnéticos. <br>
+                d) Solicite los registros que dejen evidencia del transporte donde se identifique el contenido de los medios, la protección aplicada, al igual que los tiempos de transferencia a los responsables durante el transporte, y el recibo en su destino.
+  
+              </p>
+            </div>
+  
+          <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+  
+        </div>
+  
+          <div class="container-items">
+  
+            <h3><strong>ID Item:</strong> AD.4.1.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Inventario de activos </h3>
+  
+            <h3><strong>Descripción:</strong>Se deben identificar los activos asociados con la información y las instalaciones de procesamiento de información, y se debe elaborar y mantener un inventario de estos activos.</h3>
+            <h3><strong>MSPI:</strong> Componente Planificación <br>
+              Modelo de madurez inicial</h3>
+            <h3><strong>Ciberseguridad:</strong><strong> ID AM-1</strong>,<strong>ID AM-2</strong>,<strong>ID AM-5</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p16" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.1.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Propiedad de los activos </h3>
+  
+            <h3><strong>Descripción:</strong>Los activos mantenidos en el inventario deben tener un propietario.</h3>
+            <h3><strong>MSPI:</strong><br>
+              Modelo de madurez inicial</h3>
+            <h3><strong>Ciberseguridad:</strong><strong> ID AM-1</strong>,<strong>ID AM-2</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p17" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.1.3</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Uso aceptable de los activos </h3>
+  
+            <h3><strong>Descripción:</strong>Se deben identificar, documentar e implementar reglas para el uso aceptable de información y de activos asociados con información e instalaciones de procesamiento de información.</h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p18" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.1.4</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Devolucion de activos </h3>
+  
+            <h3><strong>Descripción:</strong>Todos los empleados y usuarios de partes externas deben devolver todos los activos de la organización que se encuentren a su cargo, al terminar su empleo, contrato o acuerdo.</h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong><strong>PR.JP-11</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p19" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.2.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Clasificación de la información </h3>
+  
+            <h3><strong>Descripción:</strong>La información se debería clasificar en función de los requisitos legales, valor, criticidad y susceptibilidad a divulgación o a modificación no autorizada.</h3>
+            <h3><strong>MSPI:</strong><br> Modelo de madurez inicial</h3>
+            <h3><strong>Ciberseguridad:</strong><strong></strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p20" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.2.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Etiquetado de la informacion </h3>
+  
+            <h3><strong>Descripción:</strong></h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong><strong>PR.DS-5</strong>,<strong>PR.PT-2</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p21" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.2.3</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Manejo de activos </h3>
+  
+            <h3><strong>Descripción:</strong></h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong><strong>PR.DS-1</strong>,<strong>PR.DS-2</strong>,<strong>PR.DS-3</strong>,<strong>PR.DS-5</strong>,<strong>PR.PT-2</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p22" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.3.1</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Gestión de medios removibles  </h3>
+  
+            <h3><strong>Descripción:</strong></h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong><strong>PR.DS-3</strong>,<strong>PR.IP-6</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p23" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.3.2</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Disposicion de los medios  </h3>
+  
+            <h3><strong>Descripción:</strong></h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong><strong>PR.DS-3</strong>,<strong>PR.IP-6</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p24" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+            <h3><strong>ID Item:</strong> AD.4.3.3</h3>
+            <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
+            <h3><strong>ITEM:</strong> Transferencia de medios fisicos  </h3>
+  
+            <h3><strong>Descripción:</strong></h3>
+            <h3><strong>MSPI:</strong><br></h3>
+            <h3><strong>Ciberseguridad:</strong><strong>PR.DS-3</strong>,<strong>PR.PT-2</strong></h3>
+  
+            <mat-form-field>
+              <mat-label>Calificación</mat-label>
+              <mat-select formControlName="p25" (ngModelChange)="calculoT1()">
+                <mat-option value="n/a">n/a</mat-option>
+                <mat-option value="0">0</mat-option>
+                <mat-option value="20">20</mat-option>
+                <mat-option value="40">40</mat-option>
+                <mat-option value="60">60</mat-option>
+                <mat-option value="80">80</mat-option>
+                <mat-option value="100">100</mat-option>
+  
+              </mat-select>
+            </mat-form-field>
+  
+  
+          </div>
+        <p (click)="controlT4=!controlT4" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+  
+        </div>
+  
+      </div>
+  
+      <div class="container-general">
+        <h3><strong>ID Item:</strong> AD.5 <strong>Calificacion:</strong> {{t5 | number:'2.1-2'}}</h3>
+        <p (click)="controlT5=!controlT5" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlT5 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT5">
+  
+          <h3><strong>Apartado:</strong> Aspectos de seguridad de la informacion de la gestion de la continuidad del negocio</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de la continuidad </h3>
+          <h3><strong>ITEM:</strong> Politicas de la seguridad de la información </h3>
+  
+          <h3><strong>Descripción:</strong> Aspectos de seguridad de la informacion de la gestion de la continuidad del negocio</h3>
+          <h3><strong>MSPI:</strong></h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Pruebas:</strong> <p [style]="{'color': 'blue'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>AD.5.1.1</strong></h3>
+              <p>
+                Indagar si la Entidad cuenta con un BCP (Bussines Continuity Plan) o DRP (Disaster Recovery Plan). <br>
+                Determine si aplica para procesos críticos solamente o se han incluido otros procesos o por lo menos se ha reconocido la necesidad de ampliarlo a otros procesos (para determinar el nivel de madurez)
+                Evalúe si se ha incluido en estos planes y procedimientos los requisitos de seguridad de la información. <br>
+                Tenga en cuenta que en ausencia de una planificación formal de continuidad de negocio y recuperación de desastres, la dirección de seguridad de la información debería suponer que los requisitos de seguridad de la información siguen siendo los mismos en situaciones adversas, en comparación con las condiciones operacionales normales. Como alternativa, una organización puede llevar a cabo un análisis de impacto en el negocio de los aspectos de seguridad de la información, para determinar los requisitos de seguridad de la información aplicables a situaciones adversas.
+                De acuerdo a la NIST también se deben tener planes de respuesta a incidentes y recuperación de incidentes.
+                Tenga en cuenta para la calificación:<br>
+                1) Si existen planes de continuidad del negocio que contemplen los procesos críticos de la Entidad que garanticen la continuidad de los mismos. Se documentan tan y protegen adecuadamente los planes de continuidad del negocio de la Entidad, este de estar documentado y firmado, por la alta Dirección, están en <strong>40</strong> .
+                2) Si se reconoce la importancia de ampliar los planes de continuidad de del negocio a otros procesos, pero aun no se pueden incluir ni trabajar con ellos, están en <strong>60</strong>.
+  
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.5.1.2</strong></h3>
+              <p>
+                Verifique si la entidad cuenta con: <br>
+                a) Una estructura organizacional adecuada para prepararse, mitigar y responder a un evento contingente, usando personal con la autoridad, experiencia y competencia necesarias. <br>
+                b) Personal formalmente asignado de respuesta a incidentes con la responsabilidad, autoridad y competencia necesarias para manejar un incidente y mantener la seguridad de la información. <br>
+                c) Planes aprobados, procedimientos de respuesta y recuperación documentados, en los que se especifique en detalle como la organización gestionará un evento contingente y mantendrá su seguridad de la información en un límite predeterminado, con base en los objetivos de continuidad de seguridad de la información aprobados por la dirección. <br>
+  
+                Revise si los controles de seguridad de la información que se han implementado continúan operando durante un evento contingente. Si los controles de seguridad no están en capacidad de seguir brindando seguridad a la información, se la Entidad debe establecer, implementar y mantener otros controles para mantener un nivel aceptable de seguridad de la información.
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.5.1.3</strong></h3>
+              <p>
+                Indague y solicite evidencias de la realización de pruebas de la funcionalidad de los procesos, procedimientos y controles de continuidad de la seguridad de la información, para asegurar que son coherentes con los objetivos de continuidad de la seguridad de la información;
+                <br>
+                Tenga en cuenta que la verificación de los controles de continuidad de la seguridad de la información es diferente de las pruebas y verificación generales de seguridad de la información. Si es posible, es preferible integrar la verificación de los controles de continuidad de negocio de seguridad de la información con las pruebas de recuperación de desastres y de continuidad de negocio de la organización.
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.5.2.1</strong></h3>
+              <p>
+                Verifique si la Entidad cuenta con arquitecturas redundantes, ya sea un centro de cómputo principal y otro alterno o componentes redundantes en el único centro de cómputo.
+                Indague como se han definido las necesidades de los procesos para seleccionar que elementos deben ser redundantes.
+                Solicite si aplica las pruebas aplicadas para asegurar que un componente redundante funciona de la forma prevista durante una emergencia o falla.
+              </p>
+  
+            </div>
+            <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+          </div>
+  
+          <div>
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.5.1.1</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de la Continuidad </h3>
+              <h3><strong>ITEM:</strong> Planificación de la continuidad de la seguridad de la información </h3>
+  
+              <h3><strong>Descripción:</strong> </h3>
+              <h3><strong>MSPI:</strong> Modelo de madurez gestionado</h3>
+              <h3><strong>Ciberseguridad:</strong><strong> ID.BE-1</strong>,<strong> PR.IP-9</strong></h3>
+  
+                <mat-form-field>
+                  <mat-label>Calificación</mat-label>
+                  <mat-select formControlName="p26" (ngModelChange)="calculoT1()">
+                    <mat-option value="n/a">n/a</mat-option>
+                    <mat-option value="0">0</mat-option>
+                    <mat-option value="20">20</mat-option>
+                    <mat-option value="40">40</mat-option>
+                    <mat-option value="60">60</mat-option>
+                    <mat-option value="80">80</mat-option>
+                    <mat-option value="100">100</mat-option>
+  
+                  </mat-select>
+                </mat-form-field>
+  
+              </div>
+  
+              <div class="container-items">
+                <h3><strong>ID Item:</strong> AD.5.1.2</h3>
+                <h3><strong>Funcionario a cargo:</strong> Responsable de la Continuidad </h3>
+                <h3><strong>ITEM:</strong> Implementación de la continuidad de la seguridad de la información </h3>
+  
+                <h3><strong>Descripción:</strong> La organización debe establecer, documentar, implementar y mantener procesos, procedimientos y controles para garantizar el nivel necesario de continuidad para la seguridad de la información durante una situación adversa,</h3>
+                <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
+                <h3><strong>Ciberseguridad:</strong><strong> ID.BE-5</strong>, <strong> PR.IP-4</strong>,<strong> PR.IP-9</strong></h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p27" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.5.1.3</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de la Continuidad </h3>
+              <h3><strong>ITEM:</strong> Verificación, revisión y evaluación de la continuidad de la seguridad de la información. </h3>
+  
+              <h3><strong>Descripción:</strong> </h3>
+              <h3><strong>MSPI:</strong> Modelo de madurez optimizado</h3>
+              <h3><strong>Ciberseguridad:</strong><strong> PR.JP-4</strong>,<strong> PR.IP-10</strong></h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p28" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.5.2.1</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de la Continuidad </h3>
+              <h3><strong>ITEM:</strong> Disponibilidad de instalaciones de procesamiento de información </h3>
+  
+              <h3><strong>Descripción:</strong> </h3>
+              <h3><strong>MSPI:</strong></h3>
+              <h3><strong>Ciberseguridad:</strong>ID.BE-5</h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p29" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+  
+          </div>
+          <p (click)="controlT5=!controlT5" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+        </div>
+  
+  
+      </div>
+  
+      <div class="container-general">
+        <h3><strong>ID Item:</strong> AD.6 <strong>Calificacion:</strong> {{t6 | number:'2.1-2'}}</h3>
+        <p (click)="controlT6=!controlT6" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlT6 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT6">
+  
+          <h3><strong>Apartado:</strong> Cumplimiento</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de SI/Responsable de TICs/Control Interno </h3>
+          <h3><strong>ITEM:</strong> Cumplimiento </h3>
+  
+          <h3><strong>MSPI:</strong></h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Pruebas:</strong> <p [style]="{'color': 'blue'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>AD.6.1.1</strong></h3>
+              <p>
+                Solicite la relación de requisitos legales, reglamentarios, estatutarios, que le aplican a la Entidad (Normograma).
+                Indague si existe un responsable de identificarlos y se definen los responsables para su cumplimiento.
+  
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.1.2</strong></h3>
+              <p>
+                1) Solicite los procedimientos para el cumplimiento de los requisitos y contractuales relacionados con los derechos de propiedad intelectual y el uso de productos de software patentados. <br>
+                2) Verifique si la Entidad cuenta con una política publicada sobre el cumplimiento de derechos de propiedad intelectual que defina el uso legal del software y de productos informáticos. Esta política debe estar orientada no solo al software, si no también a documentos gráficos, libros, etc. <br>
+                3) Indague como se controla que no se instale software ilegal. <br>
+                4) Indague si se tiene un inventario de software instalado y se compara con el número de licencias adquiridas para asegurar que no se incumplen los derechos de propiedad intelectual. Tenga en cuenta los controles que deben existir para asegurar que no se exceda ningún número máximo de usuarios permitido dentro de la licencia.
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.1.3</strong></h3>
+              <p>
+                Revise si la Entidad cuenta con tablas de retención documental que especifiquen los registros y el periodo por el cual se deberían retener, además del almacenamiento, manejo y destrucción. Posibles tipos de registros pueden ser registros contables, registros de bases de datos, logs de transacciones, logs de auditoría y procedimientos operacionales, los medios de almacenamiento permitidos pueden ser papel, microfichas, medios magnéticos, medios ópticos etc.
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.1.4</strong></h3>
+              <p>
+                Indague sobre las disposiciones que ha definido la Entidad para cumplir con la legislación de privacidad de los datos personales, ley estatutaria 1581 de 2012 y decreto 1377 que reglamenta la ley de 2013. <br>
+                1) Revise si existe una política para cumplir con la ley <br>
+                2) Si están definidos los responsables <br>
+                3) Si se tienen identificados los repositorios de datos personales <br>
+                4) Si se ha solicitado consentimiento al titular para tratar los datos personales y se guarda registro de este hecho. <br>
+                5) Si se adoptan las medidas técnicas necesarias para proteger las bases de datos donde reposan estos datos.
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.1.5</strong></h3>
+              <p>
+                n/a
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.2.1</strong></h3>
+              <p>
+                Investigue la forma como se realizan revisiones independientes (por personas diferentes o no vinculadas a un proceso o área que se revisa), de la conveniencia, la adecuación y la eficacia continuas de la  gestionar la seguridad de la información.
+                Para esto solicite: <br>
+                1) El plan de auditorías del año 2015 <br>
+                2) El resultado de las auditorías del año 2015 <br>
+                3) Las oportunidades de mejora o cambios en la seguridad de la información identificados.
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.2.2</strong></h3>
+              <p>
+                1) Verifique si los gerentes aseguran que todos los procedimientos de seguridad dentro de su área de responsabilidad se llevan a cabo correctamente para lograr el cumplimiento de las políticas y estándares de seguridad.  <br>
+                2) Verifique la revisión periódica del cumplimiento del centro de cómputo con  las políticas y normas de seguridad establecidas. <br>
+                3) Verifique si los sistemas de información son revisados regularmente para asegurar el cumplimiento de las normas de seguridad de la información
+  
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.6.2.3</strong></h3>
+              <p>
+                Verifique si se realizan evaluaciones de seguridad técnicas por o bajo la supervisión de personal autorizado, apoyado en herramientas automáticas o con revisiones manuales realizadas por especialistas.
+                Solicite evidencia de las últimas pruebas realizadas, sus resultados y seguimiento para asegurar que las brechas de seguridad fueron solucionadas.
+  
+              </p>
+            </div>
+  
+            <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+          </div>
+  
+          <div>
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.6.1.1</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de SI</h3>
+              <h3><strong>ITEM:</strong> Identificación de la legislación aplicable y de los requisitos contractuales. </h3>
+  
+              <h3><strong>Descripción:</strong> </h3>
+              <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
+              <h3><strong>Ciberseguridad:</strong></h3>
+  
+                <mat-form-field>
+                  <mat-label>Calificación</mat-label>
+                  <mat-select formControlName="p30" (ngModelChange)="calculoT1()">
+                    <mat-option value="n/a">n/a</mat-option>
+                    <mat-option value="0">0</mat-option>
+                    <mat-option value="20">20</mat-option>
+                    <mat-option value="40">40</mat-option>
+                    <mat-option value="60">60</mat-option>
+                    <mat-option value="80">80</mat-option>
+                    <mat-option value="100">100</mat-option>
+  
+                  </mat-select>
+                </mat-form-field>
+  
+              </div>
+  
+              <div class="container-items">
+                <h3><strong>ID Item:</strong> AD.6.1.2</h3>
+                <h3><strong>Funcionario a cargo:</strong> Responsable de TICs </h3>
+                <h3><strong>ITEM:</strong> Derechos de propiedad intelectual. </h3>
+  
+                <h3><strong>Descripción:</strong></h3>
+                <h3><strong>MSPI:</strong></h3>
+                <h3><strong>Ciberseguridad:</strong></h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p31" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.5.1.3</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+              <h3><strong>ITEM:</strong> Protección de registros. </h3>
+  
+              <h3><strong>Descripción:</strong> Se deben proteger los registros importantes de una organización de pérdida, destrucción y falsificación, en concordancia con los requerimientos estatutarios, reguladores, contractuales y comerciales</h3>
+              <h3><strong>MSPI:</strong> </h3>
+              <h3><strong>Ciberseguridad:</strong><strong> PR.JP-4</strong></h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p32" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.6.1.4</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+              <h3><strong>ITEM:</strong> Protección de los datos y privacidad de la información relacionada con los datos personales. </h3>
+  
+              <h3><strong>Descripción:</strong> Se deben asegurar la protección y privacidad de la información personal tal como se requiere en la legislación relevante, las regulaciones y, si fuese aplicable, las cláusulas contractuales. </h3>
+              <h3><strong>MSPI:</strong></h3>
+              <h3><strong>Ciberseguridad:</strong>DE.DP-2</h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p33" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.6.2.1</h3>
+              <h3><strong>Funcionario a cargo:</strong> Control interno </h3>
+              <h3><strong>ITEM:</strong> Revisión independiente de la seguridad de la información </h3>
+  
+              <h3><strong>Descripción:</strong> </h3>
+              <h3><strong>MSPI:</strong></h3>
+              <h3><strong>Ciberseguridad:</strong></h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p34" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.6.2.2</h3>
+              <h3><strong>Funcionario a cargo:</strong> Control interno </h3>
+              <h3><strong>ITEM:</strong> Cumplimiento con las políticas y normas de seguridad. </h3>
+  
+              <h3><strong>Descripción:</strong> Asegurar el cumplimiento de los sistemas con las políticas y estándares de seguridad organizacional.</h3>
+              <h3><strong>MSPI:</strong></h3>
+              <h3><strong>Ciberseguridad:</strong> <strong>PR.IP-12</strong> </h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p35" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+  
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.6.2.3</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
+              <h3><strong>ITEM:</strong> Revisión de cumplimiento técnico. </h3>
+  
+              <h3><strong>Descripción:</strong> Los sistemas de información deben chequearse regularmente para el cumplimiento con los estándares de implementación de la seguridad.</h3>
+              <h3><strong>MSPI:</strong></h3>
+              <h3><strong>Ciberseguridad:</strong> <strong>ID.RA-1</strong> </h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p36" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+          </div>
+          <p (click)="controlT6=!controlT6" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+        </div>
+  
+  
+      </div>
+  
+      <div class="container-general">
+        <h3><strong>ID Item:</strong> AD.7 <strong>Calificacion:</strong> {{t7 | number:'2.1-2'}}</h3>
+        <p (click)="controlT7=!controlT7" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlT7 ? "ver mas..." : "ver menos" }}</p>
+        <div *ngIf="controlT7">
+  
+          <h3><strong>Apartado:</strong> Relaciones con los proveedores</h3>
+          <h3><strong>Funcionario a cargo:</strong> Responsable de compras y adquisiciones </h3>
+          <h3><strong>ITEM:</strong> Relaciones con los proveedores </h3>
+  
+          <h3><strong>MSPI:</strong></h3>
+  
+          <h3 (click)="verPrueba=!verPrueba"><strong>Pruebas:</strong> <p [style]="{'color': 'blue'}">{{!verPrueba ? "ver mas..." : "ver menos" }}</p></h3>
+          <div *ngIf="verPrueba">
+            <div>
+              <h3 class="subtitle"><strong>AD.7.1</strong></h3>
+              <p>
+                1) Solicite la política de seguridad de la información para las relaciones con los proveedores, que indique los requisitos de SI para mitigar los riesgos asociados con el acceso de proveedores a los activos de la organización, esta política debe reflejarse en los acuerdos con los proveedores que deben estar documentados. <br>
+                2) Verifique en la muestra de  proveedores  con acceso a los activos de información (no necesariamente son proveedores de tecnología de la información, por ejemplo pueden ser proveedores que tengan por ejemplo un proceso de nomina en outsourcing), se hayan suscrito acuerdos (ANS) formales donde se establezcan y acuerden todos los requisitos de seguridad de la información pertinentes con cada proveedor. <br>
+                3) Verifique para los proveedores si se tiene en cuenta los riesgos de SI asociados a la cadena de suministro, por ejemplo para los proveedores en la nube es muy común que se apoyen en otros proveedores para proporcionar las instalaciones y se deben manejar los riesgos asociados a este tercero con el cual la entidad no tiene una relación comercial directa. Solicite que le indiquen como identifican para cada proveedor su cadena de suministro y obtenga evidencia de este hecho.
+  
+              </p>
+  
+            </div>
+  
+            <div>
+              <h3 class="subtitle"><strong>AD.7.2</strong></h3>
+              <p>
+                1) Indague y solicite evidencia en una muestra de proveedores seleccionada, como la entidad hace seguimiento, revisa y audita con regularidad de acuerdo a la política la prestación de servicios de los proveedores y el cumplimiento de los compromisos respecto a la seguridad de la información. <br>
+                2) Indague y evidencie como se gestionan los cambios en el suministro de servicios por parte de los proveedores, incluido el mantenimiento y la mejora de las políticas, procedimientos y controles de seguridad de la información existentes , teniendo en cuenta la criticidad de la información, sistemas y procesos del negocio involucrados, los incidentes de seguridad de la información y la revaloración de los riesgos.
+              </p>
+  
+            </div>
+  
+  
+            <p (click)="verPrueba=!verPrueba" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+          </div>
+  
+          <div>
+            <div class="container-items">
+              <h3><strong>ID Item:</strong> AD.7.1</h3>
+              <h3><strong>Funcionario a cargo:</strong> Responsable de compras y adquisiciones</h3>
+              <h3><strong>ITEM:</strong> Seguridad de la información en las relaciones con los proveedores </h3>
+  
+              <h3><strong>Descripción:</strong> Asegurar la protección de los activos de la entidad que sean accesibles para los proveedores </h3>
+              <h3><strong>MSPI:</strong> Modelo de madurez definimatDialogActions</h3>
+              <h3><strong>Ciberseguridad:</strong></h3>
+  
+                <mat-form-field>
+                  <mat-label>Calificación</mat-label>
+                  <mat-select formControlName="p37" (ngModelChange)="calculoT1()">
+                    <mat-option value="n/a">n/a</mat-option>
+                    <mat-option value="0">0</mat-option>
+                    <mat-option value="20">20</mat-option>
+                    <mat-option value="40">40</mat-option>
+                    <mat-option value="60">60</mat-option>
+                    <mat-option value="80">80</mat-option>
+                    <mat-option value="100">100</mat-option>
+  
+                  </mat-select>
+                </mat-form-field>
+  
+              </div>
+  
+              <div class="container-items">
+                <h3><strong>ID Item:</strong> AD.7.2</h3>
+                <h3><strong>Funcionario a cargo:</strong> Responsable de compras y adquisiciones </h3>
+                <h3><strong>ITEM:</strong> Gestión de la prestación de servicios de proveedores </h3>
+  
+                <h3><strong>Descripción:</strong>Gestión de la prestación de servicios de proveedores</h3>
+                <h3><strong>MSPI:</strong>Modelo de Madurez Definido</h3>
+                <h3><strong>Ciberseguridad:</strong></h3>
+  
+              <mat-form-field>
+                <mat-label>Calificación</mat-label>
+                <mat-select formControlName="p38" (ngModelChange)="calculoT1()">
+                  <mat-option value="n/a">n/a</mat-option>
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="40">40</mat-option>
+                  <mat-option value="60">60</mat-option>
+                  <mat-option value="80">80</mat-option>
+                  <mat-option value="100">100</mat-option>
+  
+                </mat-select>
+              </mat-form-field>
+  
+            </div>
+  
+  
+          </div>
+          <p (click)="controlT7=!controlT7" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
+        </div>
+  
+      </div>
+  
+      <div class="container-button">
+        <button mat-raised-button color="primary" (click)="regResult()" [disabled]="formT.invalid">Enviar Información</button>
+      </div>
+  
+  
+    </form>
+  
+    </div>

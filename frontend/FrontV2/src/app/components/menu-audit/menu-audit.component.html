@@ -4,7 +4,7 @@
   class="example-radio-group"
   [(ngModel)]="option">
   <mat-radio-button class="example-radio-button" *ngFor="let fase of fases" [value]="fase">
-    {{fase}}
+    {{ fase }}
   </mat-radio-button>
 </mat-radio-group>
 </div>
@@ -17,6 +17,9 @@
   </div>
   <div *ngIf="option.replace(' ','').toLowerCase()=='administrativas'">
     <app-administrativas></app-administrativas>
+  </div>
+  <div *ngIf="option.replace(' ','').toLowerCase()=='tecnicas'">
+    <app-tecnicas></app-tecnicas>
   </div>
 </div>
 
