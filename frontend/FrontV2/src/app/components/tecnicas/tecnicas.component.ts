@@ -57,6 +57,7 @@ export class TecnicasComponent implements OnInit {
       p16: new FormControl("", Validators.required),
       //T2
 
+      //T3  
       p17: new FormControl("", Validators.required),
       p18: new FormControl("", Validators.required),
       p19: new FormControl("", Validators.required),
@@ -70,10 +71,10 @@ export class TecnicasComponent implements OnInit {
       p27: new FormControl("", Validators.required),
       p28: new FormControl("", Validators.required),
       p29: new FormControl("", Validators.required),
-
-
       p30: new FormControl("", Validators.required),
       p31: new FormControl("", Validators.required),
+      //T3
+
       p32: new FormControl("", Validators.required),
       p33: new FormControl("", Validators.required),
       p34: new FormControl("", Validators.required),
@@ -98,6 +99,14 @@ export class TecnicasComponent implements OnInit {
 
   calculoT2() {
     this.t2 = (Number(this.formT.value.p15) + Number(this.formT.value.p16)) / 2;
+  }
+
+  calculoT3() {
+    this.t1 = (Number(this.formT.value.p17) + Number(this.formT.value.p18)+ Number(this.formT.value.p19) +
+                Number(this.formT.value.p20) + Number(this.formT.value.p21)+ Number(this.formT.value.p22) +
+                Number(this.formT.value.p23) + Number(this.formT.value.p24)+ Number(this.formT.value.p25) +
+                Number(this.formT.value.p26) + Number(this.formT.value.p27)+ Number(this.formT.value.p28) +
+                Number(this.formT.value.p29) + Number(this.formT.value.p30)+ Number(this.formT.value.p31)) / 15;
   }
 
   regResult(){
