@@ -14,7 +14,7 @@ export class TecnicasService {
     private httpClient: HttpClient
   ) { }
 
-  regResultAdmin(parametro:ITecnicas):Observable<String>{
+  regResultTecnicas(parametro:ITecnicas):Observable<String>{
     return this.httpClient.post<String>(this.URL_BACKEND+"/registrar",parametro);
   }
 }

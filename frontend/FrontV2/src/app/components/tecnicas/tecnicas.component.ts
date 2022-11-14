@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,FormControl,Validators } from '@angular/forms';
 import { TecnicasService } from '../../services/tecnicas.service';
+import { ITecnicas } from '../../models/tecnicas';
 
 @Component({
   selector: 'app-tecnicas',
@@ -218,7 +219,7 @@ export class TecnicasComponent implements OnInit {
   }
 
   calculoT3() {
-    this.t1 = (Number(this.formT.value.p17) + Number(this.formT.value.p18)+ Number(this.formT.value.p19) +
+    this.t3 = (Number(this.formT.value.p17) + Number(this.formT.value.p18)+ Number(this.formT.value.p19) +
                 Number(this.formT.value.p20) + Number(this.formT.value.p21)+ Number(this.formT.value.p22) +
                 Number(this.formT.value.p23) + Number(this.formT.value.p24)+ Number(this.formT.value.p25) +
                 Number(this.formT.value.p26) + Number(this.formT.value.p27)+ Number(this.formT.value.p28) +
@@ -226,7 +227,7 @@ export class TecnicasComponent implements OnInit {
   }
 
   calculoT4() {
-    this.t1 = (Number(this.formT.value.p32) + Number(this.formT.value.p33)+ Number(this.formT.value.p34) +
+    this.t4 = (Number(this.formT.value.p32) + Number(this.formT.value.p33)+ Number(this.formT.value.p34) +
                 Number(this.formT.value.p35) + Number(this.formT.value.p36)+ Number(this.formT.value.p37) +
                 Number(this.formT.value.p38) + Number(this.formT.value.p39)+ Number(this.formT.value.p40) +
                 Number(this.formT.value.p41) + Number(this.formT.value.p42)+ Number(this.formT.value.p43) +
@@ -234,13 +235,13 @@ export class TecnicasComponent implements OnInit {
   }
 
   calculoT5() {
-    this.t1 = (Number(this.formT.value.p46) + Number(this.formT.value.p47)+ Number(this.formT.value.p48) +
+    this.t5 = (Number(this.formT.value.p46) + Number(this.formT.value.p47)+ Number(this.formT.value.p48) +
                 Number(this.formT.value.p49) + Number(this.formT.value.p50)+ Number(this.formT.value.p51) +
                 Number(this.formT.value.p52)) / 5;
   }
 
   calculoT6() {
-    this.t1 = (Number(this.formT.value.p53) + Number(this.formT.value.p54)+ Number(this.formT.value.p55) +
+    this.t6 = (Number(this.formT.value.p53) + Number(this.formT.value.p54)+ Number(this.formT.value.p55) +
                 Number(this.formT.value.p56) + Number(this.formT.value.p57)+ Number(this.formT.value.p58) +
                 Number(this.formT.value.p59) + Number(this.formT.value.p60)+ Number(this.formT.value.p61) +
                 Number(this.formT.value.p62) + Number(this.formT.value.p63)+ Number(this.formT.value.p64) +
@@ -248,13 +249,29 @@ export class TecnicasComponent implements OnInit {
   }
 
   calculoT7() {
-    this.t1 = (Number(this.formT.value.p66) + Number(this.formT.value.p67)+ Number(this.formT.value.p68) +
+    this.t7 = (Number(this.formT.value.p66) + Number(this.formT.value.p67)+ Number(this.formT.value.p68) +
                 Number(this.formT.value.p69) + Number(this.formT.value.p70)+ Number(this.formT.value.p71) +
                 Number(this.formT.value.p72)) / 7;
   }
 
   regResult(){
-
+    let temp={
+      t1:this.t1,
+      t2:this.t2,
+      t3:this.t3,
+      t4:this.t4,
+      t5:this.t5,
+      t6:this.t6,
+      t7:this.t7,
+      companyName:sessionStorage.getItem('company'),
+      emailAuditor:sessionStorage.getItem('auditor')
+    } 
+    this.tecnicasService.regResultTecnicas(temp as ITecnicas)
+      .subscribe({
+        next:reponse=>reponse=='ok'? alert('info registrada con exito'): alert('error al enviar datos'),
+        error:error=>console.log(error),
+        complete:()=> alert('info registrada con exito') 
+      })  
   }
 
 }
