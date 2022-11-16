@@ -34,6 +34,7 @@
     "@progress/kendo-svg-icons": "^0.1.2",
     "@progress/kendo-theme-default": "^5.0.0",
     "@progress/kendo-theme-material": "^5.8.1",
+    "ngx-material-file-input": "^3.0.0",
     "primeicons": "^6.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

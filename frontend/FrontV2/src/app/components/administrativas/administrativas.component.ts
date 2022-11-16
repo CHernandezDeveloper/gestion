@@ -89,6 +89,16 @@ export class AdministrativasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  crearDatoTemp(){
+
+    let temporal = {
+        p16:this.formA.value.p16,
+        p20:this.formA.value.p20
+    }
+
+  }
+
+
   calculoAD1() {
     this.ad1 = (Number(this.formA.value.p1) + Number(this.formA.value.p2)) / 2;
   }
