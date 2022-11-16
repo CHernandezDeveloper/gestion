@@ -16,10 +16,10 @@
     <app-areas></app-areas>
   </div>
   <div *ngIf="option.replace(' ','').toLowerCase()=='administrativas'">
-    <app-administrativas></app-administrativas>
+    <app-administrativas (enviarJson)="recibiendoJsoAdmin($event)"></app-administrativas>
   </div>
   <div *ngIf="option.replace(' ','').toLowerCase()=='tecnicas'">
-    <app-tecnicas></app-tecnicas>
+    <app-tecnicas (enviarJsonTecnicas)="recibiendoJsonTecni($event)"></app-tecnicas>
   </div>
   <div *ngIf="option.replace(' ','').toLowerCase()=='phva'">
     <app-phva></app-phva>

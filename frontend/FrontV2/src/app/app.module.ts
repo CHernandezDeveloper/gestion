@@ -12,6 +12,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatRadioModule} from '@angular/material/radio';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+
 
 
 
@@ -38,6 +40,8 @@ import { MenuAuditComponent } from './components/menu-audit/menu-audit.component
 import { AreasComponent } from './components/areas/areas.component';
 import { AdministrativasComponent } from './components/administrativas/administrativas.component';
 import { TecnicasComponent } from './components/tecnicas/tecnicas.component';
+import { ResultadosAuditoriasComponent } from './components/resultados-auditorias/resultados-auditorias.component';
+import { VisualResultadosComponent } from './components/visual-resultados/visual-resultados.component';
 import { PhvaComponent } from './components/phva/phva.component';
 
 
@@ -61,7 +65,9 @@ import { PhvaComponent } from './components/phva/phva.component';
     AreasComponent,
     AdministrativasComponent,
     TecnicasComponent,
-    PhvaComponent,
+    ResultadosAuditoriasComponent,
+    VisualResultadosComponent,
+    PhvaComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +84,8 @@ import { PhvaComponent } from './components/phva/phva.component';
     MatTableModule,
     MatSelectModule,
     MatExpansionModule,
-    MatRadioModule
+    MatRadioModule,
+    MaterialFileInputModule
 
   ],
   providers: [],
