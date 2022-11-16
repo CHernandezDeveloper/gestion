@@ -38,6 +38,7 @@ import { MenuAuditComponent } from './components/menu-audit/menu-audit.component
 import { AreasComponent } from './components/areas/areas.component';
 import { AdministrativasComponent } from './components/administrativas/administrativas.component';
 import { TecnicasComponent } from './components/tecnicas/tecnicas.component';
+import { PhvaComponent } from './components/phva/phva.component';
 
 
 
@@ -60,6 +61,7 @@ import { TecnicasComponent } from './components/tecnicas/tecnicas.component';
     AreasComponent,
     AdministrativasComponent,
     TecnicasComponent,
+    PhvaComponent,
   ],
   imports: [
     BrowserModule,
