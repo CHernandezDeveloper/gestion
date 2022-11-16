@@ -40,8 +40,12 @@ import { MenuAuditComponent } from './components/menu-audit/menu-audit.component
 import { AreasComponent } from './components/areas/areas.component';
 import { AdministrativasComponent } from './components/administrativas/administrativas.component';
 import { TecnicasComponent } from './components/tecnicas/tecnicas.component';
+<<<<<<< HEAD
 import { ResultadosAuditoriasComponent } from './components/resultados-auditorias/resultados-auditorias.component';
 import { VisualResultadosComponent } from './components/visual-resultados/visual-resultados.component';
+=======
+import { PhvaComponent } from './components/phva/phva.component';
+>>>>>>> 3a6935d7086e6359237819d880bea1df39c45817
 
 
 
@@ -64,8 +68,12 @@ import { VisualResultadosComponent } from './components/visual-resultados/visual
     AreasComponent,
     AdministrativasComponent,
     TecnicasComponent,
+<<<<<<< HEAD
     ResultadosAuditoriasComponent,
     VisualResultadosComponent,
+=======
+    PhvaComponent,
+>>>>>>> 3a6935d7086e6359237819d880bea1df39c45817
   ],
   imports: [
     BrowserModule,

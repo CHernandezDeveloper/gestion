@@ -1,8 +1,9 @@
 <div class="container-form">
-    <form [formGroup]="formT">
-  
+    <form [formGroup]="formphva">
+        
       <div class="container-general">
-        <h3><strong>ID Item:</strong> T.1 <strong>Calificacion:</strong> {{t1 | number:'2.1-2'}}</h3>
+        <h2><strong>PLANIFICACIÓN</strong></h2>
+        <h3><strong>ID Item:</strong> P.1 <strong>Calificacion:</strong> {{t1 | number:'2.1-2'}}</h3>
         <p (click)="controlT1=!controlT1" [style]="{'color': 'blue','cursor':'pointer'}"> {{!controlT1 ? "ver mas..." : "ver menos" }}</p>
         <div *ngIf="controlT1">
           <h3><strong>Apartado:</strong> Control de acceso</h3>
@@ -3598,10 +3599,10 @@
       </div>
   
       <div class="container-button">
-        <button mat-raised-button color="primary" (click)="regResult()" [disabled]="formT.invalid">Enviar Información</button>
+        <button mat-raised-button color="primary" (click)="regResult()" [disabled]="formphva.invalid">Enviar Información</button>
       </div>
   
   
     </form>
   
-    </div>
+    </div> 

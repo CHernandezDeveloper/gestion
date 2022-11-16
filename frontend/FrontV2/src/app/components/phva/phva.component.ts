@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder,FormControl,Validators } from '@angular/forms';
-import { TecnicasService } from '../../services/tecnicas.service';
-import { ITecnicas } from '../../models/tecnicas';
+import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
+import { IPhva } from 'src/app/models/phva';
+import { PhvaService } from 'src/app/services/phva.service';
+import { TecnicasService } from 'src/app/services/tecnicas.service';
 
 @Component({
-  selector: 'app-tecnicas',
-  templateUrl: './tecnicas.component.html',
-  styleUrls: ['./tecnicas.component.scss']
+  selector: 'app-phva',
+  templateUrl: './phva.component.html',
+  styleUrls: ['./phva.component.scss']
 })
-export class TecnicasComponent implements OnInit {
+export class PhvaComponent implements OnInit {
 
   verPrueba:boolean=false;
-  formT: FormGroup;
+  formphva: FormGroup;
 
   controlT1:boolean=false;
   controlT2:boolean=false;
@@ -31,12 +32,10 @@ export class TecnicasComponent implements OnInit {
 
   constructor(
     private formBuilder:FormBuilder,
-    private tecnicasService:TecnicasService
+    private phvaService:PhvaService
+  ) { 
 
-  ) {
-
-    this.formT=this.formBuilder.group({
-      //T1
+    this.formphva=this.formBuilder.group({
       p1: new FormControl("", Validators.required),
       ob1:new FormControl("",Validators.required),
       p2: new FormControl("", Validators.required),
@@ -74,7 +73,7 @@ export class TecnicasComponent implements OnInit {
       ob16:new FormControl("",Validators.required),
       //T2
 
-      //T3
+      //T3  
       p17: new FormControl("", Validators.required),
       ob17:new FormControl("",Validators.required),
       p18: new FormControl("", Validators.required),
@@ -201,101 +200,55 @@ export class TecnicasComponent implements OnInit {
       ob72:new FormControl("",Validators.required),
       //T7
     })
-  }
 
-  ngOnInit(): void {
-  }
-
-  jason(){
-    let acumuT46=(Number(this.formT.value.p43) + Number(this.formT.value.p44))/2
-
-    let acumuT11=(Number(this.formT.value.p1) + Number(this.formT.value.p2))/2
-
-    let acumuT32=(Number(this.formT.value.p23) + Number(this.formT.value.p24) + Number(this.formT.value.p25) + 
-                  Number(this.formT.value.p26) + Number(this.formT.value.p27) + Number(this.formT.value.p28) + 
-                  Number(this.formT.value.p29) + Number(this.formT.value.p30) + Number(this.formT.value.p31))/9
-
-    let acumuT41=(Number(this.formT.value.p32) + Number(this.formT.value.p33) + Number(this.formT.value.p34) + 
-                  Number(this.formT.value.p35))/4
-
-    let acumuT51=(Number(this.formT.value.p46) + Number(this.formT.value.p47) + Number(this.formT.value.p48))/3
-
-    let acumuT52=(Number(this.formT.value.p49) + Number(this.formT.value.p50) + Number(this.formT.value.p51) + Number(this.formT.value.p52))/4
-
-    let acumuT61=(Number(this.formT.value.p53) + Number(this.formT.value.p54) + Number(this.formT.value.p55))/3
-
-    let acumuT62=(Number(this.formT.value.p56) + Number(this.formT.value.p57) + Number(this.formT.value.p58) + 
-                  Number(this.formT.value.p59) + Number(this.formT.value.p60) + Number(this.formT.value.p61) + 
-                  Number(this.formT.value.p62) + Number(this.formT.value.p63) + Number(this.formT.value.p64))/9
-
-    let acumuT12=(Number(this.formT.value.p3) + Number(this.formT.value.p4) + Number(this.formT.value.p5) + Number(this.formT.value.p6) + Number(this.formT.value.p7) + Number(this.formT.value.p8))/6
-
-    let acumuT14=(Number(this.formT.value.p10) + Number(this.formT.value.p11) + Number(this.formT.value.p12) + Number(this.formT.value.p13))/4
-
-    let acumuT21=(Number(this.formT.value.p15) + Number(this.formT.value.p16) )/2
-
-    let acumuT44=(Number(this.formT.value.p38) + Number(this.formT.value.p39) + Number(this.formT.value.p40) + Number(this.formT.value.p41))/4
-    
-    let jason={
-      p69:this.formT.value.p69,p67:this.formT.value.p67,p36:this.formT.value.p36,
-      p37:this.formT.value.p37,T46:acumuT46,T11:acumuT11,
-      p8:this.formT.value.p8,p9:this.formT.value.p9,T32:acumuT32,
-      T41:acumuT41,p42:this.formT.value.p42,T51:acumuT51,
-      T52:acumuT52,T61:acumuT61,T62:acumuT62,
-      p65:this.formT.value.p65,p68:this.formT.value.p68,p72:this.formT.value.p72,
-      p71:this.formT.value.p71,p63:this.formT.value.p68,p38:this.formT.value.p38,
-      p70:this.formT.value.p70,T12:acumuT12,T14:acumuT14,
-      T21:acumuT21,T44:acumuT44,p45:this.formT.value.p45
-
-    }
-  }
+  } 
 
   calculoT1() {
-    this.t1 = (Number(this.formT.value.p1) + Number(this.formT.value.p2)+ Number(this.formT.value.p3) +
-                Number(this.formT.value.p4) + Number(this.formT.value.p5)+ Number(this.formT.value.p6) +
-                Number(this.formT.value.p7) + Number(this.formT.value.p8)+ Number(this.formT.value.p9) +
-                Number(this.formT.value.p10) + Number(this.formT.value.p11)+ Number(this.formT.value.p12) +
-                Number(this.formT.value.p13) + Number(this.formT.value.p14)) / 14;
+    this.t1 = (Number(this.formphva.value.p1) + Number(this.formphva.value.p2)+ Number(this.formphva.value.p3) +
+                Number(this.formphva.value.p4) + Number(this.formphva.value.p5)+ Number(this.formphva.value.p6) +
+                Number(this.formphva.value.p7) + Number(this.formphva.value.p8)+ Number(this.formphva.value.p9) +
+                Number(this.formphva.value.p10) + Number(this.formphva.value.p11)+ Number(this.formphva.value.p12) +
+                Number(this.formphva.value.p13) + Number(this.formphva.value.p14)) / 14;
   }
 
   calculoT2() {
-    this.t2 = (Number(this.formT.value.p15) + Number(this.formT.value.p16)) / 2;
+    this.t2 = (Number(this.formphva.value.p15) + Number(this.formphva.value.p16)) / 2;
   }
 
   calculoT3() {
-    this.t3 = (Number(this.formT.value.p17) + Number(this.formT.value.p18)+ Number(this.formT.value.p19) +
-                Number(this.formT.value.p20) + Number(this.formT.value.p21)+ Number(this.formT.value.p22) +
-                Number(this.formT.value.p23) + Number(this.formT.value.p24)+ Number(this.formT.value.p25) +
-                Number(this.formT.value.p26) + Number(this.formT.value.p27)+ Number(this.formT.value.p28) +
-                Number(this.formT.value.p29) + Number(this.formT.value.p30)+ Number(this.formT.value.p31)) / 15;
+    this.t3 = (Number(this.formphva.value.p17) + Number(this.formphva.value.p18)+ Number(this.formphva.value.p19) +
+                Number(this.formphva.value.p20) + Number(this.formphva.value.p21)+ Number(this.formphva.value.p22) +
+                Number(this.formphva.value.p23) + Number(this.formphva.value.p24)+ Number(this.formphva.value.p25) +
+                Number(this.formphva.value.p26) + Number(this.formphva.value.p27)+ Number(this.formphva.value.p28) +
+                Number(this.formphva.value.p29) + Number(this.formphva.value.p30)+ Number(this.formphva.value.p31)) / 15;
   }
 
   calculoT4() {
-    this.t4 = (Number(this.formT.value.p32) + Number(this.formT.value.p33)+ Number(this.formT.value.p34) +
-                Number(this.formT.value.p35) + Number(this.formT.value.p36)+ Number(this.formT.value.p37) +
-                Number(this.formT.value.p38) + Number(this.formT.value.p39)+ Number(this.formT.value.p40) +
-                Number(this.formT.value.p41) + Number(this.formT.value.p42)+ Number(this.formT.value.p43) +
-                Number(this.formT.value.p44) + Number(this.formT.value.p45)) / 14;
+    this.t4 = (Number(this.formphva.value.p32) + Number(this.formphva.value.p33)+ Number(this.formphva.value.p34) +
+                Number(this.formphva.value.p35) + Number(this.formphva.value.p36)+ Number(this.formphva.value.p37) +
+                Number(this.formphva.value.p38) + Number(this.formphva.value.p39)+ Number(this.formphva.value.p40) +
+                Number(this.formphva.value.p41) + Number(this.formphva.value.p42)+ Number(this.formphva.value.p43) +
+                Number(this.formphva.value.p44) + Number(this.formphva.value.p45)) / 14;
   }
 
   calculoT5() {
-    this.t5 = (Number(this.formT.value.p46) + Number(this.formT.value.p47)+ Number(this.formT.value.p48) +
-                Number(this.formT.value.p49) + Number(this.formT.value.p50)+ Number(this.formT.value.p51) +
-                Number(this.formT.value.p52)) / 5;
+    this.t5 = (Number(this.formphva.value.p46) + Number(this.formphva.value.p47)+ Number(this.formphva.value.p48) +
+                Number(this.formphva.value.p49) + Number(this.formphva.value.p50)+ Number(this.formphva.value.p51) +
+                Number(this.formphva.value.p52)) / 5;
   }
 
   calculoT6() {
-    this.t6 = (Number(this.formT.value.p53) + Number(this.formT.value.p54)+ Number(this.formT.value.p55) +
-                Number(this.formT.value.p56) + Number(this.formT.value.p57)+ Number(this.formT.value.p58) +
-                Number(this.formT.value.p59) + Number(this.formT.value.p60)+ Number(this.formT.value.p61) +
-                Number(this.formT.value.p62) + Number(this.formT.value.p63)+ Number(this.formT.value.p64) +
-                Number(this.formT.value.p65)) / 13;
+    this.t6 = (Number(this.formphva.value.p53) + Number(this.formphva.value.p54)+ Number(this.formphva.value.p55) +
+                Number(this.formphva.value.p56) + Number(this.formphva.value.p57)+ Number(this.formphva.value.p58) +
+                Number(this.formphva.value.p59) + Number(this.formphva.value.p60)+ Number(this.formphva.value.p61) +
+                Number(this.formphva.value.p62) + Number(this.formphva.value.p63)+ Number(this.formphva.value.p64) +
+                Number(this.formphva.value.p65)) / 13;
   }
 
   calculoT7() {
-    this.t7 = (Number(this.formT.value.p66) + Number(this.formT.value.p67)+ Number(this.formT.value.p68) +
-                Number(this.formT.value.p69) + Number(this.formT.value.p70)+ Number(this.formT.value.p71) +
-                Number(this.formT.value.p72)) / 7;
+    this.t7 = (Number(this.formphva.value.p66) + Number(this.formphva.value.p67)+ Number(this.formphva.value.p68) +
+                Number(this.formphva.value.p69) + Number(this.formphva.value.p70)+ Number(this.formphva.value.p71) +
+                Number(this.formphva.value.p72)) / 7;
   }
 
   regResult(){
@@ -310,12 +263,15 @@ export class TecnicasComponent implements OnInit {
       companyName:sessionStorage.getItem('company'),
       emailAuditor:sessionStorage.getItem('auditor')
     } 
-    this.tecnicasService.regResultTecnicas(temp as ITecnicas)
+    this.phvaService.regResultPhva(temp as IPhva)
       .subscribe({
         next:reponse=>reponse=='ok'? alert('info registrada con exito'): alert('error al enviar datos'),
         error:error=>console.log(error),
         complete:()=> alert('info registrada con exito') 
       })  
+  }
+
+  ngOnInit(): void {
   }
 
 }
