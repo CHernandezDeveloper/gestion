@@ -1,6 +1,6 @@
 export interface IResultado{
 
-  companyName:string,
+  companyName:string | null,
   emailAuditor: string | null
   //nivel Inicial
   r1?:number,

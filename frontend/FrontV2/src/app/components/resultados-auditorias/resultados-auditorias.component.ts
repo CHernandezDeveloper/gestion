@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RSA_X931_PADDING } from 'constants';
 import { IResultado } from 'src/app/models/resultado-model';
 
 @Component({
