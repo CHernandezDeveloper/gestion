@@ -14,21 +14,16 @@ export class PhvaComponent implements OnInit {
   verPrueba:boolean=false;
   formphva: FormGroup;
 
-  controlT1:boolean=false;
-  controlT2:boolean=false;
-  controlT3:boolean=false;
-  controlT4:boolean=false;
-  controlT5:boolean=false;
-  controlT6:boolean=false;
-  controlT7:boolean=false;
+  controlPhva1:boolean=false;
+  controlPhva2:boolean=false;
+  controlPhva3:boolean=false;
+  controlPhva4:boolean=false;
 
-  t1:number=0;
-  t2:number=0;
-  t3:number=0;
-  t4:number=0;
-  t5:number=0;
-  t6:number=0;
-  t7:number=0;
+  phva1:number=0;
+  phva2:number=0;
+  phva3:number=0;
+  phva4:number=0;
+  
 
   constructor(
     private formBuilder:FormBuilder,
@@ -36,230 +31,145 @@ export class PhvaComponent implements OnInit {
   ) { 
 
     this.formphva=this.formBuilder.group({
+      //PHVA1
       p1: new FormControl("", Validators.required),
-      ob1:new FormControl("",Validators.required),
+      ob1:new FormControl(""),
       p2: new FormControl("", Validators.required),
-      ob2:new FormControl("",Validators.required),
+      ob2:new FormControl(""),
       p3: new FormControl("", Validators.required),
-      ob3:new FormControl("",Validators.required),
+      ob3:new FormControl(""),
       p4: new FormControl("", Validators.required),
-      ob4:new FormControl("",Validators.required),
+      ob4:new FormControl(""),
       p5: new FormControl("", Validators.required),
-      ob5:new FormControl("",Validators.required),
+      ob5:new FormControl(""),
+
+      //PHVA2
       p6: new FormControl("", Validators.required),
-      ob6:new FormControl("",Validators.required),
+      ob6:new FormControl(""),
       p7: new FormControl("", Validators.required),
-      ob7:new FormControl("",Validators.required),
+      ob7:new FormControl(""),
       p8: new FormControl("", Validators.required),
-      ob8:new FormControl("",Validators.required),
+      ob8:new FormControl(""),
       p9: new FormControl("", Validators.required),
-      ob9:new FormControl("",Validators.required),
+      ob9:new FormControl(""),
       p10: new FormControl("", Validators.required),
-      ob10:new FormControl("",Validators.required),
+      ob10:new FormControl(""),
       p11: new FormControl("", Validators.required),
-      ob11:new FormControl("",Validators.required),
+      ob11:new FormControl(""),
       p12: new FormControl("", Validators.required),
-      ob12:new FormControl("",Validators.required),
+      ob12:new FormControl(""),
       p13: new FormControl("", Validators.required),
-      ob13:new FormControl("",Validators.required),
+      ob13:new FormControl(""),
       p14: new FormControl("", Validators.required),
-      ob14:new FormControl("",Validators.required),
+      ob14:new FormControl(""),
       //T1
 
       //T2
       p15: new FormControl("", Validators.required),
-      ob15:new FormControl("",Validators.required),
+      ob15:new FormControl(""),
       p16: new FormControl("", Validators.required),
-      ob16:new FormControl("",Validators.required),
+      ob16:new FormControl(""),
       //T2
 
       //T3  
       p17: new FormControl("", Validators.required),
-      ob17:new FormControl("",Validators.required),
+      ob17:new FormControl(""),
       p18: new FormControl("", Validators.required),
-      ob18:new FormControl("",Validators.required),
+      ob18:new FormControl(""),
       p19: new FormControl("", Validators.required),
-      ob19:new FormControl("",Validators.required),
+      ob19:new FormControl(""),
       p20: new FormControl("", Validators.required),
-      ob20:new FormControl("",Validators.required),
+      ob20:new FormControl(""),
       p21: new FormControl("", Validators.required),
-      ob21:new FormControl("",Validators.required),
+      ob21:new FormControl(""),
       p22: new FormControl("", Validators.required),
-      ob22:new FormControl("",Validators.required),
+      ob22:new FormControl(""),
       p23: new FormControl("", Validators.required),
-      ob23:new FormControl("",Validators.required),
+      ob23:new FormControl(""),
       p24: new FormControl("", Validators.required),
-      ob24:new FormControl("",Validators.required),
+      ob24:new FormControl(""),
       p25: new FormControl("", Validators.required),
-      ob25:new FormControl("",Validators.required),
+      ob25:new FormControl(""),
       p26: new FormControl("", Validators.required),
-      ob26:new FormControl("",Validators.required),
+      ob26:new FormControl(""),
       p27: new FormControl("", Validators.required),
-      ob27:new FormControl("",Validators.required),
+      ob27:new FormControl(""),
       p28: new FormControl("", Validators.required),
-      ob28:new FormControl("",Validators.required),
+      ob28:new FormControl(""),
       p29: new FormControl("", Validators.required),
-      ob29:new FormControl("",Validators.required),
+      ob29:new FormControl(""),
       p30: new FormControl("", Validators.required),
-      ob30:new FormControl("",Validators.required),
+      ob30:new FormControl(""),
       p31: new FormControl("", Validators.required),
-      ob31:new FormControl("",Validators.required),
+      ob31:new FormControl(""),
       //T3
 
       //T4
       p32: new FormControl("", Validators.required),
-      ob32:new FormControl("",Validators.required),
+      ob32:new FormControl(""),
       p33: new FormControl("", Validators.required),
-      ob33:new FormControl("",Validators.required),
+      ob33:new FormControl(""),
       p34: new FormControl("", Validators.required),
-      ob34:new FormControl("",Validators.required),
+      ob34:new FormControl(""),
       p35: new FormControl("", Validators.required),
-      ob35:new FormControl("",Validators.required),
+      ob35:new FormControl(""),
       p36: new FormControl("", Validators.required),
-      ob36:new FormControl("",Validators.required),
+      ob36:new FormControl(""),
       p37: new FormControl("", Validators.required),
-      ob37:new FormControl("",Validators.required),
+      ob37:new FormControl(""),
       p38: new FormControl("", Validators.required),
-      ob38:new FormControl("",Validators.required),
+      ob38:new FormControl(""),
       p39: new FormControl("", Validators.required),
-      ob39:new FormControl("",Validators.required),
+      ob39:new FormControl(""),
       p40: new FormControl("", Validators.required),
-      ob40:new FormControl("",Validators.required),
+      ob40:new FormControl(""),
       p41: new FormControl("", Validators.required),
-      ob41:new FormControl("",Validators.required),
+      ob41:new FormControl(""),
       p42: new FormControl("", Validators.required),
-      ob42:new FormControl("",Validators.required),
+      ob42:new FormControl(""),
       p43: new FormControl("", Validators.required),
-      ob43:new FormControl("",Validators.required),
+      ob43:new FormControl(""),
       p44: new FormControl("", Validators.required),
-      ob44:new FormControl("",Validators.required),
+      ob44:new FormControl(""),
       p45: new FormControl("", Validators.required),
-      ob45:new FormControl("",Validators.required),
+      ob45:new FormControl(""),
       //T4
-
-      //T5
-      p46: new FormControl("", Validators.required),
-      ob46:new FormControl("",Validators.required),
-      p47: new FormControl("", Validators.required),
-      ob47:new FormControl("",Validators.required),
-      p48: new FormControl("", Validators.required),
-      ob48:new FormControl("",Validators.required),
-      p49: new FormControl("", Validators.required),
-      ob49:new FormControl("",Validators.required),
-      p50: new FormControl("", Validators.required),
-      ob50:new FormControl("",Validators.required),
-      p51: new FormControl("", Validators.required),
-      ob51:new FormControl("",Validators.required),
-      p52: new FormControl("", Validators.required),
-      ob52:new FormControl("",Validators.required),
-      //T5
-
-      //T6
-      p53: new FormControl("", Validators.required),
-      ob53:new FormControl("",Validators.required),
-      p54: new FormControl("", Validators.required),
-      ob54:new FormControl("",Validators.required),
-      p55: new FormControl("", Validators.required),
-      ob55:new FormControl("",Validators.required),
-      p56: new FormControl("", Validators.required),
-      ob56:new FormControl("",Validators.required),
-      p57: new FormControl("", Validators.required),
-      ob57:new FormControl("",Validators.required),
-      p58: new FormControl("", Validators.required),
-      ob58:new FormControl("",Validators.required),
-      p59: new FormControl("", Validators.required),
-      ob59:new FormControl("",Validators.required),
-      p60: new FormControl("", Validators.required),
-      ob60:new FormControl("",Validators.required),
-      p61: new FormControl("", Validators.required),
-      ob61:new FormControl("",Validators.required),
-      p62: new FormControl("", Validators.required),
-      ob62:new FormControl("",Validators.required),
-      p63: new FormControl("", Validators.required),
-      ob63:new FormControl("",Validators.required),
-      p64: new FormControl("", Validators.required),
-      ob64:new FormControl("",Validators.required),
-      p65: new FormControl("", Validators.required),
-      ob65:new FormControl("",Validators.required),
-      //T6
-
-      //T7
-      p66: new FormControl("", Validators.required),
-      ob66:new FormControl("",Validators.required),
-      p67: new FormControl("", Validators.required),
-      ob67:new FormControl("",Validators.required),
-      p68: new FormControl("", Validators.required),
-      ob68:new FormControl("",Validators.required),
-      p69: new FormControl("", Validators.required),
-      ob69:new FormControl("",Validators.required),
-      p70: new FormControl("", Validators.required),
-      ob70:new FormControl("",Validators.required),
-      p71: new FormControl("", Validators.required),
-      ob71:new FormControl("",Validators.required),
-      p72: new FormControl("", Validators.required),
-      ob72:new FormControl("",Validators.required),
-      //T7
+      
     })
 
   } 
 
-  calculoT1() {
-    this.t1 = (Number(this.formphva.value.p1) + Number(this.formphva.value.p2)+ Number(this.formphva.value.p3) +
-                Number(this.formphva.value.p4) + Number(this.formphva.value.p5)+ Number(this.formphva.value.p6) +
-                Number(this.formphva.value.p7) + Number(this.formphva.value.p8)+ Number(this.formphva.value.p9) +
-                Number(this.formphva.value.p10) + Number(this.formphva.value.p11)+ Number(this.formphva.value.p12) +
-                Number(this.formphva.value.p13) + Number(this.formphva.value.p14)) / 14;
+  calculoPhva1() {
+    this.phva1 = (Number(this.formphva.value.p1) + Number(this.formphva.value.p2)+ Number(this.formphva.value.p3) +
+                  Number(this.formphva.value.p4) + Number(this.formphva.value.p5)) / 5;
   }
 
-  calculoT2() {
-    this.t2 = (Number(this.formphva.value.p15) + Number(this.formphva.value.p16)) / 2;
+  calculoPhva2() {
+    this.phva2 = (Number(this.formphva.value.p15) + Number(this.formphva.value.p16)) / 2;
   }
 
-  calculoT3() {
-    this.t3 = (Number(this.formphva.value.p17) + Number(this.formphva.value.p18)+ Number(this.formphva.value.p19) +
+  calculoPhva3() {
+    this.phva3 = (Number(this.formphva.value.p17) + Number(this.formphva.value.p18)+ Number(this.formphva.value.p19) +
                 Number(this.formphva.value.p20) + Number(this.formphva.value.p21)+ Number(this.formphva.value.p22) +
                 Number(this.formphva.value.p23) + Number(this.formphva.value.p24)+ Number(this.formphva.value.p25) +
                 Number(this.formphva.value.p26) + Number(this.formphva.value.p27)+ Number(this.formphva.value.p28) +
                 Number(this.formphva.value.p29) + Number(this.formphva.value.p30)+ Number(this.formphva.value.p31)) / 15;
   }
 
-  calculoT4() {
-    this.t4 = (Number(this.formphva.value.p32) + Number(this.formphva.value.p33)+ Number(this.formphva.value.p34) +
+  calculoPhva4() {
+    this.phva4 = (Number(this.formphva.value.p32) + Number(this.formphva.value.p33)+ Number(this.formphva.value.p34) +
                 Number(this.formphva.value.p35) + Number(this.formphva.value.p36)+ Number(this.formphva.value.p37) +
                 Number(this.formphva.value.p38) + Number(this.formphva.value.p39)+ Number(this.formphva.value.p40) +
                 Number(this.formphva.value.p41) + Number(this.formphva.value.p42)+ Number(this.formphva.value.p43) +
                 Number(this.formphva.value.p44) + Number(this.formphva.value.p45)) / 14;
   }
 
-  calculoT5() {
-    this.t5 = (Number(this.formphva.value.p46) + Number(this.formphva.value.p47)+ Number(this.formphva.value.p48) +
-                Number(this.formphva.value.p49) + Number(this.formphva.value.p50)+ Number(this.formphva.value.p51) +
-                Number(this.formphva.value.p52)) / 5;
-  }
-
-  calculoT6() {
-    this.t6 = (Number(this.formphva.value.p53) + Number(this.formphva.value.p54)+ Number(this.formphva.value.p55) +
-                Number(this.formphva.value.p56) + Number(this.formphva.value.p57)+ Number(this.formphva.value.p58) +
-                Number(this.formphva.value.p59) + Number(this.formphva.value.p60)+ Number(this.formphva.value.p61) +
-                Number(this.formphva.value.p62) + Number(this.formphva.value.p63)+ Number(this.formphva.value.p64) +
-                Number(this.formphva.value.p65)) / 13;
-  }
-
-  calculoT7() {
-    this.t7 = (Number(this.formphva.value.p66) + Number(this.formphva.value.p67)+ Number(this.formphva.value.p68) +
-                Number(this.formphva.value.p69) + Number(this.formphva.value.p70)+ Number(this.formphva.value.p71) +
-                Number(this.formphva.value.p72)) / 7;
-  }
-
   regResult(){
     let temp={
-      t1:this.t1,
-      t2:this.t2,
-      t3:this.t3,
-      t4:this.t4,
-      t5:this.t5,
-      t6:this.t6,
-      t7:this.t7,
+      phva1:this.phva1,
+      phva2:this.phva2,
+      phva3:this.phva3,
+      phva4:this.phva4,
       companyName:sessionStorage.getItem('company'),
       emailAuditor:sessionStorage.getItem('auditor')
     } 
