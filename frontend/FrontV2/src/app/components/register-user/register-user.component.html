@@ -2,6 +2,7 @@
 
   <div class="contenedor-formulario">
     <div class="container-header">
+      <img class="logo" src="../assets/img/create.png" alt="Logo App">
       <h1>Registrarse</h1>
     </div>
     <form class="formulario" #LoginForm="ngForm" [formGroup]="registrarUsuario">
@@ -102,7 +103,7 @@
           (click)="registerUser()"
           [disabled]="!registrarUsuario.valid"
         >
-          Registrase
+          Registrarse
         </button>
       </div>
       <div class="contenedor-button d-grid gap-2 mb-3">
