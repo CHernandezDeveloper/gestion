@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
 import { IPhva } from 'src/app/models/phva';
 import { PhvaService } from 'src/app/services/phva.service';
-import { TecnicasService } from 'src/app/services/tecnicas.service';
 
 @Component({
   selector: 'app-phva',
@@ -50,94 +49,39 @@ export class PhvaComponent implements OnInit {
       ob7:new FormControl(""),
       p8: new FormControl("", Validators.required),
       ob8:new FormControl(""),
+
+      //PHVA3
       p9: new FormControl("", Validators.required),
       ob9:new FormControl(""),
       p10: new FormControl("", Validators.required),
       ob10:new FormControl(""),
       p11: new FormControl("", Validators.required),
       ob11:new FormControl(""),
+
+      //PHVA4
       p12: new FormControl("", Validators.required),
       ob12:new FormControl(""),
       p13: new FormControl("", Validators.required),
       ob13:new FormControl(""),
-      p14: new FormControl("", Validators.required),
-      ob14:new FormControl(""),
-      //T1
-
-      //T2
-      p15: new FormControl("", Validators.required),
-      ob15:new FormControl(""),
-      p16: new FormControl("", Validators.required),
-      ob16:new FormControl(""),
-      //T2
-
-      //T3  
-      p17: new FormControl("", Validators.required),
-      ob17:new FormControl(""),
-      p18: new FormControl("", Validators.required),
-      ob18:new FormControl(""),
-      p19: new FormControl("", Validators.required),
-      ob19:new FormControl(""),
-      p20: new FormControl("", Validators.required),
-      ob20:new FormControl(""),
-      p21: new FormControl("", Validators.required),
-      ob21:new FormControl(""),
-      p22: new FormControl("", Validators.required),
-      ob22:new FormControl(""),
-      p23: new FormControl("", Validators.required),
-      ob23:new FormControl(""),
-      p24: new FormControl("", Validators.required),
-      ob24:new FormControl(""),
-      p25: new FormControl("", Validators.required),
-      ob25:new FormControl(""),
-      p26: new FormControl("", Validators.required),
-      ob26:new FormControl(""),
-      p27: new FormControl("", Validators.required),
-      ob27:new FormControl(""),
-      p28: new FormControl("", Validators.required),
-      ob28:new FormControl(""),
-      p29: new FormControl("", Validators.required),
-      ob29:new FormControl(""),
-      p30: new FormControl("", Validators.required),
-      ob30:new FormControl(""),
-      p31: new FormControl("", Validators.required),
-      ob31:new FormControl(""),
-      //T3
-
-      //T4
-      p32: new FormControl("", Validators.required),
-      ob32:new FormControl(""),
-      p33: new FormControl("", Validators.required),
-      ob33:new FormControl(""),
-      p34: new FormControl("", Validators.required),
-      ob34:new FormControl(""),
-      p35: new FormControl("", Validators.required),
-      ob35:new FormControl(""),
-      p36: new FormControl("", Validators.required),
-      ob36:new FormControl(""),
-      p37: new FormControl("", Validators.required),
-      ob37:new FormControl(""),
-      p38: new FormControl("", Validators.required),
-      ob38:new FormControl(""),
-      p39: new FormControl("", Validators.required),
-      ob39:new FormControl(""),
-      p40: new FormControl("", Validators.required),
-      ob40:new FormControl(""),
-      p41: new FormControl("", Validators.required),
-      ob41:new FormControl(""),
-      p42: new FormControl("", Validators.required),
-      ob42:new FormControl(""),
-      p43: new FormControl("", Validators.required),
-      ob43:new FormControl(""),
-      p44: new FormControl("", Validators.required),
-      ob44:new FormControl(""),
-      p45: new FormControl("", Validators.required),
-      ob45:new FormControl(""),
-      //T4
       
     })
 
   } 
+
+  jason(){
+
+    let acumur4=(Number(this.formphva.value.p1) + Number(this.formphva.value.p4))/2
+
+    let acumur41=(Number(this.formphva.value.p9) + Number(this.formphva.value.p10) + Number(this.formphva.value.p11) + Number(this.formphva.value.p12))/4
+    let json={
+      r4:acumur4,
+      r7:Number(this.formphva.value.p1),
+      r11:Number(this.formphva.value.p6),
+      r40:Number(this.formphva.value.p8),
+      r41:acumur41,
+      r46:Number(this.formphva.value.p13)
+    }
+  }
 
   calculoPhva1() {
     this.phva1 = (Number(this.formphva.value.p1) + Number(this.formphva.value.p2)+ Number(this.formphva.value.p3) +
