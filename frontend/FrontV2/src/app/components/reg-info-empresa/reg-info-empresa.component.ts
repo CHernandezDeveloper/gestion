@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { IResultado } from 'src/app/models/resultado-model';
 import { CompanyService } from 'src/app/services/company.service';
 
 @Component({
@@ -11,6 +12,9 @@ export class RegInfoEmpresaComponent implements OnInit {
 
   formInfoEmpresa : FormGroup = new FormGroup({});
   registered: boolean = false;
+  resultados:IResultado[] = [];
+  @Output() enviarResultadoPadre = new EventEmitter;
+
 
   constructor(private formBuilder: FormBuilder, private companyService:CompanyService) { }
 
@@ -58,6 +62,11 @@ export class RegInfoEmpresaComponent implements OnInit {
       }
     )
 
+
+  }
+  recibirResultado(resultado:IResultado){
+    this.resultados = this.resultados.concat(resultado);
+    this.enviarResultadoPadre.emit(this.resultados);
 
   }
 }

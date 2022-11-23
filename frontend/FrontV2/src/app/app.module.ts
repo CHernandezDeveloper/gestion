@@ -15,8 +15,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 
-
-
 //iconos
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -43,6 +41,8 @@ import { TecnicasComponent } from './components/tecnicas/tecnicas.component';
 import { ResultadosAuditoriasComponent } from './components/resultados-auditorias/resultados-auditorias.component';
 import { VisualResultadosComponent } from './components/visual-resultados/visual-resultados.component';
 import { PhvaComponent } from './components/phva/phva.component';
+import jsPDF from 'jspdf';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
 
 
@@ -67,7 +67,8 @@ import { PhvaComponent } from './components/phva/phva.component';
     TecnicasComponent,
     ResultadosAuditoriasComponent,
     VisualResultadosComponent,
-    PhvaComponent
+    PhvaComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +86,8 @@ import { PhvaComponent } from './components/phva/phva.component';
     MatSelectModule,
     MatExpansionModule,
     MatRadioModule,
-    MaterialFileInputModule
+    MaterialFileInputModule,
+
 
   ],
   providers: [],

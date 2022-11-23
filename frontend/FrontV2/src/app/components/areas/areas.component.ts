@@ -48,8 +48,9 @@ export class AreasComponent implements OnInit {
     this.areasService.registerArea(temp).subscribe(
       {
         next:response => {
-          console.log(response)
+
           alert("Informacion Registrada")
+          this.formAreas.reset();
         },
         error: e => console.log(e)
 

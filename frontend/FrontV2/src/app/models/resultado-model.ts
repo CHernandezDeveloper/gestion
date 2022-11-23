@@ -1,9 +1,9 @@
 export interface IResultado{
 
   companyName:string | null,
-  emailAuditor: string | null
+  emailAuditor: string | null,
   //nivel Inicial
-  r1?:number,
+  r1?:number | 0,
   r2?:number,
   r3?:number,
   r4s1?:number,

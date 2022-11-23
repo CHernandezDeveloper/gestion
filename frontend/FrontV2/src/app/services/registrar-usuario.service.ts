@@ -29,4 +29,8 @@ export class RegistrarUsuarioService {
 
   }
 
+  actualizarAuditor(user:IUsuario):Observable<IUsuario>{
+    return this.http.post<IUsuario>(this.URL_BACKEND+"/actualizar",user);
+  }
+
 }

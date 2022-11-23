@@ -27,14 +27,20 @@
     <mat-tab label="Empezar Auditoria">
 
       <ng-container class="container-reg">
-        <app-reg-info-empresa></app-reg-info-empresa>
+        <app-reg-info-empresa
+          (enviarResultadoPadre)="recibirRecibir($event)"
+        ></app-reg-info-empresa>
       </ng-container>
 
     </mat-tab>
     <mat-tab label="Resultados Auditorias">
-      <app-resultados-auditorias></app-resultados-auditorias>
+      <app-resultados-auditorias
+        [resultados]="resultados"
+      ></app-resultados-auditorias>
     </mat-tab>
-    <mat-tab label="Perfil"> Content 3 </mat-tab>
+    <mat-tab label="Perfil">
+      <app-change-password></app-change-password>
+    </mat-tab>
 
     <mat-tab>
       <ng-template mat-tab-label>

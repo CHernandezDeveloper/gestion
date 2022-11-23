@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { IResultado } from 'src/app/models/resultado-model';
 
 @Component({
   selector: 'app-menu',
@@ -10,6 +11,7 @@ import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 export class MenuComponent implements OnInit {
 
   faPower = faPowerOff;
+  resultados : any;
 
   constructor(private router:Router) { }
 
@@ -20,5 +22,9 @@ export class MenuComponent implements OnInit {
     sessionStorage.removeItem("login");
     sessionStorage.removeItem("auditor");
     this.router.navigateByUrl("login")
+  }
+
+  recibirRecibir(resultado: IResultado[]){
+    this.resultados = resultado;
   }
 }

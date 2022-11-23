@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IResultado } from 'src/app/models/resultado-model';
+import { PhvaService } from 'src/app/services/phva.service';
+
 
 @Component({
   selector: 'app-menu-audit',
@@ -16,14 +18,30 @@ export class MenuAuditComponent implements OnInit {
     emailAuditor: sessionStorage.getItem('auditor')
   };
 
-  constructor() { }
+  @Output() emitirResultado = new EventEmitter;
+
+  constructor(private phvaService: PhvaService) { }
 
   ngOnInit(): void {
   }
 
   recibiendoJsoAdmin(json: any) {
 
-    this.resultado = { ...json }
+    this.resultado = {
+      ...this.resultado,
+      ...json,
+      r4s1:20,
+      r4s2:20,
+      r4s3:20,
+      r4s4:20,
+      r8:30,
+      r9:30,
+      r41s1:20,
+      r41s2:20,
+      r41s3:20,
+      r41s4:20,
+      r41s5:20,
+    }
   }
 
   recibiendoJsonTecni(jsonTe: any) {
@@ -32,5 +50,31 @@ export class MenuAuditComponent implements OnInit {
       ...jsonTe
     }
     console.log(this.resultado)
+  }
+
+  onRecibiendoJsonPhva(json: any) {
+    this.resultado = {
+      ...this.resultado,
+      ...json,
+    }
+    console.log(this.resultado)
+    this.phvaService.regitrarResultadoAdutoria(this.resultado).subscribe(
+      {
+
+        next: (response) => {
+          if (response) {
+            alert('Auditoria guardada con exito')
+            console.log(response)
+          }
+        },
+        complete:()=>{
+          this.phvaService.obtenerResultados(this.resultado.emailAuditor).subscribe({
+            next:(response)=>{
+              this.emitirResultado.emit(response);
+            }
+          })
+        }
+      }
+    );
   }
 }

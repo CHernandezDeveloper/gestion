@@ -29,11 +29,11 @@ export class LoginComponent implements OnInit {
     this.registrarUsuarioService.login(this.loginUsuario.value).subscribe(
       {
         next:(response) => {
-          console.log(response)
           if(response != null){
             this.router.navigateByUrl("dashboard")
             sessionStorage.setItem("login","access")
             sessionStorage.setItem("auditor",response.email)
+            sessionStorage.setItem("pass",response.password)
             this.loginBand = false;
           }
           else{

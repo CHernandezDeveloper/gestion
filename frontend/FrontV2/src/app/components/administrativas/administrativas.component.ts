@@ -122,6 +122,15 @@ export class AdministrativasComponent implements OnInit {
       r55: Number(this.formA.value.p28)
     }
     this.enviarJson.emit(jsonAdministrativas);
+    alert('Información Registrada con exito');
+    this.formA.reset();
+    this.controlAD1 = false;
+    this.controlAD2 = false;
+    this.controlAD3 = false;
+    this.controlAD4 = false;
+    this.controlAD5 = false;
+    this.controlAD6 = false;
+    this.controlAD7 = false;
   }
 
   calculoAD1() {
@@ -172,7 +181,7 @@ export class AdministrativasComponent implements OnInit {
       {
         next: reponse => reponse == 'ok' ? alert('info registrada con exito') : alert('error al enviar datos'),
         error: error => console.log(error),
-        complete: () => alert('info registrada con exito')
+        complete: () => { alert('info registrada con exito') }
 
       }
     )

@@ -1,0 +1,81 @@
+.container-main{
+  overflow: auto;
+  display: grid;
+  gap:2rem;
+  padding: 2rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 10rem;
+  grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+}
+.container-calificacion{
+  padding: .5rem;
+  border:2px solid rgb(60, 139, 185);
+  border-radius: 5px;
+  overflow-y: auto;
+  background-color: rgb(214, 191, 191);
+  transition: transform .6s;
+
+}
+.container-calificacion:hover{
+  transform: scale(1.1);
+}
+
+.container-calificacion h3{
+  background-color: rgb(247, 234, 234);
+  border-radius: 5px;
+}
+
+.mostarMas{
+  cursor: pointer;
+  color: blue;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.container-madrurez{
+  margin: 1rem;
+  background-color: #6b84b4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.tablaResult{
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+table{
+  border-collapse:separate;
+  border-spacing:.1rem;
+  width: 50%;
+
+}
+table tr th{
+  background-color: rgb(224, 237, 252);
+}
+
+.cumplimiento{
+  background-color: #fff;
+}
+
+.level1{
+
+  background-color: #4472C4;
+}
+.level2{
+  background-color: #0099CC;
+}
+.level3{
+  background-color: #70AD47;
+}
+.level4{
+  background-color: #ED7D31;
+}
+.level5{
+  background-color: #C00000;
+}
+
+.button{
+  margin-left: 1rem;
+}

@@ -54,7 +54,11 @@ export class UpInformationComponent implements OnInit {
         next:(response) => {
           console.log(response)
         },
-        complete:()=>alert('Valores Agregados')
+        complete:()=>{
+          this.formUpInfo.reset();
+          alert('Valores Agregados')
+
+        }
       }
     )
   }

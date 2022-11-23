@@ -22,7 +22,7 @@
     <app-tecnicas (enviarJsonTecnicas)="recibiendoJsonTecni($event)"></app-tecnicas>
   </div>
   <div *ngIf="option.replace(' ','').toLowerCase()=='phva'">
-    <app-phva></app-phva>
+    <app-phva (enviarJson)="onRecibiendoJsonPhva($event)"></app-phva>
   </div>
 </div>
 

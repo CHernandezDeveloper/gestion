@@ -274,6 +274,16 @@ export class TecnicasComponent implements OnInit {
     }
 
     this.enviarJsonTecnicas.emit(json);
+    alert('Información registrada con exito');
+    this.formT.reset();
+    this.controlT1=false;
+    this.controlT2=false;
+    this.controlT3=false;
+    this.controlT4=false;
+    this.controlT5=false;
+    this.controlT6=false;
+    this.controlT7=false;
+
   }
 
   calculoT1() {
