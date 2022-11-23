@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegistrarUsuarioService } from 'src/app/services/registrar-usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-user',
@@ -11,7 +12,7 @@ export class RegisterUserComponent implements OnInit {
 
   registrarUsuario:FormGroup = new FormGroup({});
   created : boolean = false;
-  constructor(private formBuilder:FormBuilder, private userService : RegistrarUsuarioService) {}
+  constructor(private formBuilder:FormBuilder, private userService : RegistrarUsuarioService,private router:Router) {}
 
   ngOnInit(): void {
     this.registrarUsuario=this.formBuilder.group({
@@ -34,6 +35,8 @@ export class RegisterUserComponent implements OnInit {
         }
 
       })
+    alert('Usuario registrado con exito')  
+    this.router.navigate(['/login'])
   }
 
 
