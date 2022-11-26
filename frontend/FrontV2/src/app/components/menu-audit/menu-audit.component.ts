@@ -14,7 +14,7 @@ export class MenuAuditComponent implements OnInit {
   option: string = "";
 
   resultado: IResultado = {
-    companyName: sessionStorage.getItem('companyName'),
+    companyName: sessionStorage.getItem('company'),
     emailAuditor: sessionStorage.getItem('auditor')
   };
 
@@ -57,6 +57,7 @@ export class MenuAuditComponent implements OnInit {
       ...this.resultado,
       ...json,
     }
+    console.log("hahah")
     console.log(this.resultado)
     this.phvaService.regitrarResultadoAdutoria(this.resultado).subscribe(
       {

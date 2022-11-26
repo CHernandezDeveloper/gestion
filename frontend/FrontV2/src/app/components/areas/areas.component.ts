@@ -50,7 +50,16 @@ export class AreasComponent implements OnInit {
         next:response => {
 
           alert("Informacion Registrada")
-          this.formAreas.reset();
+          this.formAreas.patchValue({
+            p1:"",
+            p2:"",
+            p3:"",
+            p4:"",
+            p5:"",
+            p6:"",
+            p7:"",
+            p8:"",
+          });
         },
         error: e => console.log(e)
 

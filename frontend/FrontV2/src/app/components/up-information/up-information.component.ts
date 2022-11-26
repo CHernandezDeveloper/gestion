@@ -55,7 +55,10 @@ export class UpInformationComponent implements OnInit {
           console.log(response)
         },
         complete:()=>{
-          this.formUpInfo.reset();
+          this.formUpInfo.setValue({
+            fileName:"",
+            observations:""
+          });
           alert('Valores Agregados')
 
         }

@@ -234,7 +234,7 @@
     </div>
 
     <div class="container-general">
-      <h3><strong>IMPLEMENTACIÓN</strong></h3>
+      <h2><strong>IMPLEMENTACIÓN</strong></h2>
       <h3><strong>Calificacion:</strong> {{phva2 | number:'2.1-2'}}</h3>
       <p (click)="controlPhva2=!controlPhva2" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlPhva2 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlPhva2">
@@ -360,7 +360,7 @@
     </div>
 
     <div class="container-general">
-      <h3><strong>EVALUACIÓN DE DESEMPEÑO</strong></h3>
+      <h2><strong>EVALUACIÓN DE DESEMPEÑO</strong></h2>
       <h3><strong>Calificacion:</strong> {{phva3 | number:'2.1-2'}}</h3>
       <p (click)="controlPhva3=!controlPhva3" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlPhva3 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlPhva3">
@@ -482,7 +482,7 @@
     </div>
 
     <div class="container-general">
-      <h3><strong>MEJORA CONTINUA</strong></h3>
+      <h2><strong>MEJORA CONTINUA</strong></h2>
       <h3><strong>Calificacion:</strong> {{phva4 | number:'2.1-2'}}</h3>
       <p (click)="controlPhva4=!controlPhva4" [style]="{'color': 'blue','cursor':'pointer'}">{{!controlPhva4 ? "ver mas..." : "ver menos" }}</p>
       <div *ngIf="controlPhva4">
@@ -574,7 +574,7 @@
     </div>
 
     <div class="container-button">
-      <button mat-raised-button color="primary" (click)="jason()" >Enviar Información</button>
+      <button mat-raised-button color="primary" (click)="jason()" [disabled]="formphva.invalid">Enviar Información</button>
     </div>
     <!-- [disabled]="formphva.invalid" -->
 

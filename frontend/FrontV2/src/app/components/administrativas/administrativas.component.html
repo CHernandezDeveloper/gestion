@@ -40,6 +40,7 @@
           <h3><strong>MSPI:</strong> Componente planificación y modelo de madurez inicial</h3>
           <h3><strong>Ciberseguridad:</strong>ID.GV-1</h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p1" (ngModelChange)="calculoAD1()">
@@ -54,10 +55,9 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
-            <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
-
+          <h3><strong>Observación:</strong></h3>
+          <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
+          
         </div>
         <div class="container-items">
           <h3><strong>ID Item:</strong> AD.1.2</h3>
@@ -67,6 +67,7 @@
           <h3><strong>Descripción:</strong> Las políticas para seguridad de la información se deberían revisar a intervalos planificados o si ocurren cambios significativos, para asegurar su conveniencia, adecuación y eficacia continuas.</h3>
           <h3><strong>MSPI:</strong> Componente planificación </h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p2" (ngModelChange)="calculoAD1()">
@@ -81,9 +82,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
         </div>
         <p (click)="controlAD1=!controlAD1" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
@@ -233,6 +233,7 @@
           <h3><strong>MSPI:</strong> Componente planificación</h3>
           <h3><strong>Ciberseguridad:</strong><strong> ID.GV-6</strong>,<strong>ID.GV-2</strong>,<strong>PR.AT-2</strong>,<strong>PR.AT-3</strong>,<strong>PR.AT-4</strong>,<strong>PR.AT-5</strong>,<strong>DE.DP-1</strong>,<strong>R5.CO</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p3" (ngModelChange)="calculoAD2()">
@@ -247,9 +248,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.2.1.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
@@ -259,6 +259,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong><strong> PR.AC-4</strong>,<strong>PR.D-5</strong>,<strong>R5.CO-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p4" (ngModelChange)="calculoAD2()">
@@ -273,9 +274,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.2.1.3</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
@@ -285,6 +285,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong> <strong> R5.CO-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p5" (ngModelChange)="calculoAD2()">
@@ -299,9 +300,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.2.1.4</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
@@ -311,6 +311,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong> <strong> R5.CO-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p6" (ngModelChange)="calculoAD2()">
@@ -325,9 +326,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.2.1.5</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
@@ -337,6 +337,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong> <strong> PR.IP-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p7" (ngModelChange)="calculoAD2()">
@@ -351,9 +352,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.2.2.1</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
@@ -363,6 +363,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p8" (ngModelChange)="calculoAD2()">
@@ -377,9 +378,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.2.2.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
@@ -389,6 +389,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong><strong> PR.AC-3</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p9" (ngModelChange)="calculoAD2()">
@@ -403,9 +404,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
         </div>
       <p (click)="controlAD2=!controlAD2" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
@@ -506,6 +506,7 @@
           <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
           <h3><strong>Ciberseguridad:</strong><strong> PR.DS-5</strong>,<strong>PR.IP-11</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p10" (ngModelChange)="calculoAD3()">
@@ -520,9 +521,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.3.1.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Gestion Humana </h3>
@@ -532,6 +532,7 @@
           <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
           <h3><strong>Ciberseguridad:</strong><strong> PR.DS-5</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p11" (ngModelChange)="calculoAD3()">
@@ -546,9 +547,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
           <h3><strong>ID Item:</strong> AD.3.2.1</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI </h3>
           <h3><strong>ITEM:</strong> Responsabilidades de la dirección </h3>
@@ -557,6 +557,7 @@
           <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
           <h3><strong>Ciberseguridad:</strong><strong> ID.GV-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p12" (ngModelChange)="calculoAD3()">
@@ -571,9 +572,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
           <h3><strong>ID Item:</strong> AD.3.2.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI/Líderes de los procesos</h3>
           <h3><strong>ITEM:</strong> Toma de conciencia, educación y formación en la seguridad de la información </h3>
@@ -583,6 +583,7 @@
             Modelo de Madurez Inicial</h3>
           <h3><strong>Ciberseguridad:</strong><strong> PR.AT-1</strong>,<strong> PR.AT-2</strong>,<strong> PR.AT-3</strong>,<strong> PR.AT-4</strong>,<strong> PR.AT-5</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p13" (ngModelChange)="calculoAD3()">
@@ -597,9 +598,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
           <h3><strong>ID Item:</strong> AD.3.2.3</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI</h3>
           <h3><strong>ITEM:</strong> Proceso disciplinario </h3>
@@ -608,6 +608,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p14" (ngModelChange)="calculoAD3()">
@@ -622,9 +623,8 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
           <h3><strong>ID Item:</strong> AD.3.3.1</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable de SI</h3>
           <h3><strong>ITEM:</strong> Terminación o cambio de responsabilidades de empleo</h3>
@@ -633,6 +633,7 @@
           <h3><strong>MSPI:</strong></h3>
           <h3><strong>Ciberseguridad:</strong><strong> PR.DS-5</strong>, <strong> PR.IP-11</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p15" (ngModelChange)="calculoAD3()">
@@ -647,9 +648,7 @@
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
         </div>
       <p (click)="controlAD3=!controlAD3" [style]="{'color': 'blue','cursor':'pointer'}"> Ocultar...</p>
 
@@ -802,6 +801,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             Modelo de madurez inicial</h3>
           <h3><strong>Ciberseguridad:</strong><strong> ID AM-1</strong>,<strong>ID AM-2</strong>,<strong>ID AM-5</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p16" (ngModelChange)="calculoAD4()">
@@ -816,9 +816,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.1.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -829,6 +828,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             Modelo de madurez inicial</h3>
           <h3><strong>Ciberseguridad:</strong><strong> ID AM-1</strong>,<strong>ID AM-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p17" (ngModelChange)="calculoAD4()">
@@ -843,9 +843,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.1.3</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -855,6 +854,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p18" (ngModelChange)="calculoAD4()">
@@ -869,9 +869,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.1.4</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -881,6 +880,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong><strong>PR.JP-11</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p19" (ngModelChange)="calculoAD4()">
@@ -895,9 +895,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.2.1</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -907,6 +906,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br> Modelo de madurez inicial</h3>
           <h3><strong>Ciberseguridad:</strong><strong></strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p20" (ngModelChange)="calculoAD4()">
@@ -921,9 +921,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.2.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -933,6 +932,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong><strong>PR.DS-5</strong>,<strong>PR.PT-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p21" (ngModelChange)="calculoAD4()">
@@ -947,9 +947,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.2.3</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -959,6 +958,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong><strong>PR.DS-1</strong>,<strong>PR.DS-2</strong>,<strong>PR.DS-3</strong>,<strong>PR.DS-5</strong>,<strong>PR.PT-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p22" (ngModelChange)="calculoAD4()">
@@ -973,9 +973,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.3.1</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -985,6 +984,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong><strong>PR.DS-3</strong>,<strong>PR.IP-6</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p23" (ngModelChange)="calculoAD4()">
@@ -999,9 +999,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.3.2</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -1011,6 +1010,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong><strong>PR.DS-3</strong>,<strong>PR.IP-6</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p24" (ngModelChange)="calculoAD4()">
@@ -1025,9 +1025,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
           <h3><strong>ID Item:</strong> AD.4.3.3</h3>
           <h3><strong>Funcionario a cargo:</strong> Responsable SI</h3>
@@ -1037,6 +1036,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
           <h3><strong>MSPI:</strong><br></h3>
           <h3><strong>Ciberseguridad:</strong><strong>PR.DS-3</strong>,<strong>PR.PT-2</strong></h3>
 
+          <h3><strong>Calificación:</strong></h3>
           <mat-form-field>
             <mat-label>Calificación</mat-label>
             <mat-select formControlName="p25" (ngModelChange)="calculoAD4()">
@@ -1051,9 +1051,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             </mat-select>
           </mat-form-field>
           <br>
-          <mat-form-field>
+          <h3><strong>Observación:</strong></h3>
             <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-          </mat-form-field>
 
 
         </div>
@@ -1138,6 +1137,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong> Modelo de madurez gestionado</h3>
             <h3><strong>Ciberseguridad:</strong><strong> ID.BE-1</strong>,<strong> PR.IP-9</strong></h3>
 
+            <h3><strong>Calificación:</strong></h3>
               <mat-form-field>
                 <mat-label>Calificación</mat-label>
                 <mat-select formControlName="p26" (ngModelChange)="calculoAD5()">
@@ -1152,9 +1152,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
                 </mat-select>
               </mat-form-field>
               <br>
-              <mat-form-field>
+              <h3><strong>Observación:</strong></h3>
                 <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-              </mat-form-field>
 
             </div>
 
@@ -1167,6 +1166,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               <h3><strong>MSPI:</strong> Modelo de madurez definido</h3>
               <h3><strong>Ciberseguridad:</strong><strong> ID.BE-5</strong>, <strong> PR.IP-4</strong>,<strong> PR.IP-9</strong></h3>
 
+              <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p27" (ngModelChange)="calculoAD5()">
@@ -1181,9 +1181,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1196,6 +1195,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong> Modelo de madurez optimizado</h3>
             <h3><strong>Ciberseguridad:</strong><strong> PR.JP-4</strong>,<strong> PR.IP-10</strong></h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p28" (ngModelChange)="calculoAD5()">
@@ -1210,9 +1210,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1225,6 +1224,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong></h3>
             <h3><strong>Ciberseguridad:</strong>ID.BE-5</h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p29" (ngModelChange)="calculoAD5()">
@@ -1239,9 +1239,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1360,6 +1359,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong> Modelo de madurez gestionado cuantitativamente</h3>
             <h3><strong>Ciberseguridad:</strong></h3>
 
+            <h3><strong>Calificación:</strong></h3>
               <mat-form-field>
                 <mat-label>Calificación</mat-label>
                 <mat-select formControlName="p30" (ngModelChange)="calculoAD6()">
@@ -1374,9 +1374,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
                 </mat-select>
               </mat-form-field>
               <br>
-              <mat-form-field>
+              <h3><strong>Observación:</strong></h3>
                 <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-              </mat-form-field>
 
             </div>
 
@@ -1389,6 +1388,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               <h3><strong>MSPI:</strong></h3>
               <h3><strong>Ciberseguridad:</strong></h3>
 
+              <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p31" (ngModelChange)="calculoAD6()">
@@ -1403,9 +1403,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1418,6 +1417,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong> </h3>
             <h3><strong>Ciberseguridad:</strong><strong> PR.JP-4</strong></h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p32" (ngModelChange)="calculoAD6()">
@@ -1432,9 +1432,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1447,6 +1446,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong></h3>
             <h3><strong>Ciberseguridad:</strong>DE.DP-2</h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p33" (ngModelChange)="calculoAD6()">
@@ -1461,9 +1461,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1476,6 +1475,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong></h3>
             <h3><strong>Ciberseguridad:</strong></h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p34" (ngModelChange)="calculoAD6()">
@@ -1490,9 +1490,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1505,6 +1504,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong></h3>
             <h3><strong>Ciberseguridad:</strong> <strong>PR.IP-12</strong> </h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p35" (ngModelChange)="calculoAD6()">
@@ -1519,10 +1519,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
-              <label >Observaciones</label>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1536,6 +1534,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong></h3>
             <h3><strong>Ciberseguridad:</strong> <strong>ID.RA-1</strong> </h3>
 
+            <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p36" (ngModelChange)="calculoAD6()">
@@ -1550,10 +1549,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
-              <label >Observaciones</label>
+            <h3><strong>Observación:</strong></h3>
               <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
 
           </div>
 
@@ -1611,6 +1608,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
             <h3><strong>MSPI:</strong> Modelo de madurez definimatDialogActions</h3>
             <h3><strong>Ciberseguridad:</strong></h3>
 
+            <h3><strong>Calificación:</strong></h3>
               <mat-form-field>
                 <mat-label>Calificación</mat-label>
                 <mat-select formControlName="p37" (ngModelChange)="calculoAD7()">
@@ -1625,9 +1623,8 @@ V             Verifique si se ha realizado esta actividad y si existen registros
                 </mat-select>
               </mat-form-field>
               <br>
-              <mat-form-field>
+              <h3><strong>Observación:</strong></h3>
                 <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-              </mat-form-field>
 
             </div>
 
@@ -1640,6 +1637,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               <h3><strong>MSPI:</strong>Modelo de Madurez Definido</h3>
               <h3><strong>Ciberseguridad:</strong></h3>
 
+              <h3><strong>Calificación:</strong></h3>
             <mat-form-field>
               <mat-label>Calificación</mat-label>
               <mat-select formControlName="p38" (ngModelChange)="calculoAD7()">
@@ -1654,11 +1652,10 @@ V             Verifique si se ha realizado esta actividad y si existen registros
               </mat-select>
             </mat-form-field>
             <br>
-            <mat-form-field>
-              <label >Observaciones</label>
-              <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
-            </mat-form-field>
-
+            
+            <h3><strong>Observación:</strong></h3>
+            <textarea matInput placeholder="Observación" #msn maxlength="800" name="Msn" cols="50" rows="7"></textarea>
+      
           </div>
 
 
@@ -1669,7 +1666,7 @@ V             Verifique si se ha realizado esta actividad y si existen registros
     </div>
 
     <div class="container-button">
-      <button mat-raised-button color="primary" (click)="crearJson()" >Enviar Información</button>
+      <button mat-raised-button color="primary" (click)="crearJson()" [disabled]="formA.invalid">Enviar Información</button>
     </div>
 
 
